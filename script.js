@@ -323,4 +323,4 @@ function showNotification(message, type = 'info') {
             }
         }, 300);
     }, 5000);
-} 
+} // Force deployment - Wed Jul 30 08:47:32 PDT 2025
