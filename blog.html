@@ -212,7 +212,7 @@
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Pain Management -->
-                <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="hand-arthritis-exercises-for-pain-relief.html" class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-heart text-xl"></i>
@@ -224,7 +224,7 @@
                 </a>
 
                 <!-- Exercise & Movement -->
-                <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="chair-exercises-arthritis-patients.html" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-dumbbell text-xl"></i>
@@ -236,7 +236,7 @@
                 </a>
 
                 <!-- Nutrition -->
-                <a href="blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html" class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="anti-inflammatory-meal-planning-autoimmune.html" class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-apple-alt text-xl"></i>
@@ -248,7 +248,7 @@
                 </a>
 
                 <!-- Sleep & Recovery -->
-                <a href="blog-posts/how-to-sleep-better-with-arthritis.html" class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="blog-post-5.html" class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-moon text-xl"></i>
@@ -260,7 +260,7 @@
                 </a>
 
                 <!-- Mental Health -->
-                <a href="blog-posts/meditation-for-chronic-pain-relief.html" class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="blog-post-3.html" class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-brain text-xl"></i>
@@ -272,7 +272,7 @@
                 </a>
 
                 <!-- Daily Living -->
-                <a href="blog-posts/arthritis-daily-living-tips.html" class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
+                <a href="healthy-habits-chronic-illness.html" class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition-all duration-300 block hover:scale-105">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white mr-4">
                             <i class="fas fa-home text-xl"></i>
@@ -376,10 +376,97 @@
             // Implement search functionality here
         });
 
+        // Sample blog articles data
+        const blogArticles = [
+            {
+                title: "Hand Arthritis Exercises for Pain Relief",
+                excerpt: "Discover gentle hand exercises that provide real pain relief for arthritis and help maintain function.",
+                category: "Pain Management",
+                url: "hand-arthritis-exercises-for-pain-relief.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            },
+            {
+                title: "Chair Exercises for Arthritis Patients",
+                excerpt: "Safe, effective chair-based exercises designed specifically for RA patients with limited mobility.",
+                category: "Exercise & Movement",
+                url: "chair-exercises-arthritis-patients.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            },
+            {
+                title: "Anti-Inflammatory Meal Planning for Autoimmune",
+                excerpt: "Learn how to create anti-inflammatory meals that work with your autoimmune condition.",
+                category: "Nutrition",
+                url: "anti-inflammatory-meal-planning-autoimmune.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            },
+            {
+                title: "Mindfulness Meditation for Chronic Conditions",
+                excerpt: "Discover meditation techniques specifically designed for managing chronic pain and stress.",
+                category: "Mental Health",
+                url: "blog-post-3.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            },
+            {
+                title: "Sleep Strategies for Chronic Pain",
+                excerpt: "Expert tips for getting better sleep when dealing with chronic pain and discomfort.",
+                category: "Sleep & Recovery",
+                url: "blog-post-5.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            },
+            {
+                title: "Healthy Habits for Chronic Illness",
+                excerpt: "Practical strategies for building sustainable healthy habits that work with your condition.",
+                category: "Daily Living",
+                url: "healthy-habits-chronic-illness.html",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=250&fit=crop"
+            }
+        ];
+
+        let currentPage = 0;
+        const articlesPerPage = 6;
+
+        // Function to create article card HTML
+        function createArticleCard(article) {
+            return `
+                <article class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <a href="${article.url}" class="block">
+                        <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-3">${article.category}</span>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-3 hover:text-primary transition-colors">${article.title}</h3>
+                            <p class="text-gray-600 mb-4">${article.excerpt}</p>
+                            <span class="text-primary font-semibold hover:underline">Read More →</span>
+                        </div>
+                    </a>
+                </article>
+            `;
+        }
+
+        // Function to load articles
+        function loadArticles() {
+            const articlesGrid = document.getElementById('articles-grid');
+            const startIndex = currentPage * articlesPerPage;
+            const endIndex = startIndex + articlesPerPage;
+            const articlesToShow = blogArticles.slice(startIndex, endIndex);
+
+            articlesToShow.forEach(article => {
+                articlesGrid.insertAdjacentHTML('beforeend', createArticleCard(article));
+            });
+
+            // Hide "Load More" button if no more articles
+            if (endIndex >= blogArticles.length) {
+                document.getElementById('load-more').style.display = 'none';
+            }
+        }
+
         // Load more articles functionality
         document.getElementById('load-more').addEventListener('click', function() {
-            // Implement load more functionality here
+            currentPage++;
+            loadArticles();
         });
+
+        // Load initial articles
+        loadArticles();
     </script>
 </body>
 </html> 
