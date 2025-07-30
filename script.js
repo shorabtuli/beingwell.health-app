@@ -1,6 +1,12 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
+    // Remove required attribute to prevent HTML5 validation
+    const emailInput = document.getElementById("visitor-email");
+    if (emailInput) {
+        emailInput.removeAttribute("required");
+        console.log("Removed required attribute from email input");
+    }
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (mobileMenuButton && mobileMenu) {
