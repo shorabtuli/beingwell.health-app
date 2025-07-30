@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Being Well - Feel Better, One Step At a Time</title>
+    <meta name="description" content="Transform your wellness journey with Being Well. Feel better, one step at a time, one win at a time.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                        error: '#ef4444',
+                        neutral: '#6b7280',
+                        'primary-light': '#818cf8',
+                        'secondary-light': '#a78bfa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-gray-900 bg-white">
+    
+    <!-- Full-Width Slogan Banner -->
+    <section class="w-full min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center relative overflow-hidden">
+        
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-br from-accent/20 to-primary/20 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <!-- Main Content Container -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Logo/Brand -->
+            <div class="mb-8 animate-fade-in">
+                <div class="flex items-center justify-center space-x-3 mb-6">
+                    <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
+                        <i class="fas fa-heart text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold text-gray-900">Being Well</span>
+                </div>
+            </div>
+            
+            <!-- Main Slogan -->
+            <div class="mb-12 animate-slide-up">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-gray-900 leading-tight tracking-tight">
+                    <span class="block">Feel Better,</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">One Step At a Time,</span>
+                    <span class="block">One Win At a Time</span>
+                </h1>
+            </div>
+            
+            <!-- Supporting Text -->
+            <div class="mb-12 animate-slide-up" style="animation-delay: 0.2s;">
+                <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                    Transform your wellness journey with gentle, sustainable habits that adapt to your unique needs and energy levels.
+                </p>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="mb-16 animate-slide-up" style="animation-delay: 0.4s;">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#download" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 min-h-[56px]">
+                        <i class="fab fa-apple text-2xl mr-3"></i>
+                        Download Being Well
+                    </a>
+                    <a href="#learn-more" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold text-lg rounded-xl hover:border-primary hover:text-primary transition-all duration-200 min-h-[56px]">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Social Proof -->
+            <div class="animate-slide-up" style="animation-delay: 0.6s;">
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-600">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <span><strong>4.9/5</strong> rating (2,847 reviews)</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-download text-green-500"></i>
+                        <span><strong>10,000+</strong> active users</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-blue-500"></i>
+                        <span><strong>HIPAA</strong> compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-10 w-4 h-4 bg-primary/30 rounded-full animate-pulse"></div>
+            <div class="absolute top-1/3 right-20 w-6 h-6 bg-secondary/40 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-1/4 left-1/4 w-3 h-3 bg-accent/50 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-1/3 right-1/3 w-5 h-5 bg-primary/20 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+        </div>
+    </section>
+    
+    <!-- Alternative Layout - Horizontal Banner -->
+    <section class="w-full bg-gradient-to-r from-primary to-secondary py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <!-- Slogan -->
+                <div class="lg:w-2/3 mb-8 lg:mb-0">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight">
+                        <span class="block">Feel Better,</span>
+                        <span class="block">One Step At a Time,</span>
+                        <span class="block">One Win At a Time</span>
+                    </h2>
+                    <p class="text-xl text-white/90 mt-6 max-w-2xl">
+                        Your journey to wellness starts with small, sustainable steps that add up to big changes.
+                    </p>
+                </div>
+                
+                <!-- CTA -->
+                <div class="lg:w-1/3 text-center lg:text-right">
+                    <a href="#download" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                        <i class="fab fa-apple text-2xl mr-3"></i>
+                        Get Started Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Minimalist Version -->
+    <section class="w-full bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-8">
+                Feel Better,<br>
+                <span class="text-primary">One Step At a Time,</span><br>
+                One Win At a Time
+            </h3>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Transform your wellness journey with gentle, sustainable habits that adapt to your unique needs.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">
+                © 2024 Being Well. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html> 

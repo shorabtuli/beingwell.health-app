@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Enhanced Title Tag -->
+    <title>RA Wellness Blog | Being Well - Expert Tips for Rheumatoid Arthritis</title>
+    
+    <!-- Enhanced Meta Description -->
+    <meta name="description" content="Discover 400+ expert articles on rheumatoid arthritis management. From pain relief to exercise routines, nutrition tips to sleep strategies - everything you need for better RA wellness.">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="rheumatoid arthritis blog, RA wellness articles, arthritis management tips, RA exercise guides, arthritis nutrition advice">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.beingwell.health/blog.html">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Being Well RA Wellness Blog",
+      "description": "Expert articles on rheumatoid arthritis management and wellness",
+      "url": "https://www.beingwell.health/blog.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Being Well",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.beingwell.health/logo.png"
+        }
+      }
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#06b6d4',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                        error: '#ef4444',
+                        neutral: '#6b7280',
+                        'primary-light': '#818cf8',
+                        'secondary-light': '#a78bfa',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-sans text-gray-900 bg-white">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="index.html" class="flex items-center space-x-2">
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                                <i class="fas fa-heart text-white text-sm" aria-hidden="true"></i>
+                            </div>
+                            <span class="text-xl font-bold text-gray-900">Being Well</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html#features" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
+                        <a href="index.html#how-it-works" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
+                        <a href="index.html#community" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Community</a>
+                        <a href="blog.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium">Blog</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-primary to-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                RA Wellness Blog
+            </h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Discover 400+ expert articles on rheumatoid arthritis management, from pain relief to exercise routines, nutrition tips to sleep strategies.
+            </p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Search articles..." 
+                           class="w-full px-6 py-4 text-lg rounded-lg border-0 shadow-lg focus:ring-2 focus:ring-white/20 focus:outline-none">
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-white/80">
+                <span class="text-sm">400+ Articles</span>
+                <span class="text-sm">•</span>
+                <span class="text-sm">Expert Tips</span>
+                <span class="text-sm">•</span>
+                <span class="text-sm">RA Focused</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Posts -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Featured Articles</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Post 1 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Morning stiffness relief" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>Pain Management</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="hover:text-primary transition-colors">
+                                How to Reduce Morning Stiffness from Rheumatoid Arthritis
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Learn proven techniques to reduce morning stiffness from rheumatoid arthritis and start your day feeling more mobile and comfortable.
+                        </p>
+                        <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="text-primary font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Featured Post 2 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Hand arthritis exercises" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>Exercise & Movement</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="hover:text-primary transition-colors">
+                                Hand Arthritis Exercises for Pain Relief
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover gentle hand exercises that provide real pain relief for arthritis and help maintain function.
+                        </p>
+                        <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="text-primary font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Featured Post 3 -->
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Chair exercises for arthritis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>Exercise & Movement</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="hover:text-primary transition-colors">
+                                Chair Exercises for Arthritis Patients
+                            </a>
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Discover safe, effective chair exercises designed specifically for arthritis patients.
+                        </p>
+                        <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="text-primary font-semibold hover:underline">
+                            Read More →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Browse by Category</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pain Management -->
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Pain Management</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Expert strategies for managing RA pain, morning stiffness, and daily discomfort.</p>
+                    <a href="#pain-management" class="text-red-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+
+                <!-- Exercise & Movement -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-dumbbell text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Exercise & Movement</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Safe, effective exercises and movement routines designed for RA patients.</p>
+                    <a href="#exercise-movement" class="text-blue-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+
+                <!-- Nutrition -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-apple-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Nutrition</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Anti-inflammatory diets, meal planning, and nutrition strategies for RA.</p>
+                    <a href="#nutrition" class="text-green-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+
+                <!-- Sleep & Recovery -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-moon text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Sleep & Recovery</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sleep hygiene, recovery techniques, and rest strategies for better RA management.</p>
+                    <a href="#sleep-recovery" class="text-purple-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+
+                <!-- Mental Health -->
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Mental Health</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Stress management, mindfulness, and emotional wellness for RA patients.</p>
+                    <a href="#mental-health" class="text-yellow-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+
+                <!-- Daily Living -->
+                <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center text-white mr-4">
+                            <i class="fas fa-home text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Daily Living</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Practical tips for work, home, travel, and daily activities with RA.</p>
+                    <a href="#daily-living" class="text-indigo-600 font-semibold hover:underline">Browse Articles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Articles Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Recent Articles</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+                <!-- Articles will be loaded dynamically -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="load-more" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-light transition-colors">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Ready to Transform Your RA Journey?</h2>
+            <p class="text-xl text-white/90 mb-8">
+                Get personalized wellness plans, track your progress, and connect with a supportive community of RA patients.
+            </p>
+            <a href="index.html#download" class="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors">
+                Download Being Well App
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                            <i class="fas fa-heart text-white text-sm"></i>
+                        </div>
+                        <span class="text-xl font-bold">Being Well</span>
+                    </div>
+                    <p class="text-gray-400">Empowering people with RA to live better through personalized wellness plans and community support.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Features</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#features" class="hover:text-white transition-colors">Personalized Plans</a></li>
+                        <li><a href="index.html#features" class="hover:text-white transition-colors">Daily Check-ins</a></li>
+                        <li><a href="index.html#features" class="hover:text-white transition-colors">Community Support</a></li>
+                        <li><a href="index.html#features" class="hover:text-white transition-colors">Progress Tracking</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Blog Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#pain-management" class="hover:text-white transition-colors">Pain Management</a></li>
+                        <li><a href="#exercise-movement" class="hover:text-white transition-colors">Exercise & Movement</a></li>
+                        <li><a href="#nutrition" class="hover:text-white transition-colors">Nutrition</a></li>
+                        <li><a href="#sleep-recovery" class="hover:text-white transition-colors">Sleep & Recovery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#testimonials" class="hover:text-white transition-colors">Success Stories</a></li>
+                        <li><a href="index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="index.html#download" class="hover:text-white transition-colors">Download App</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Being Well. All rights reserved. | <a href="#" class="hover:text-white transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-white transition-colors">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            // Implement search functionality here
+        });
+
+        // Load more articles functionality
+        document.getElementById('load-more').addEventListener('click', function() {
+            // Implement load more functionality here
+        });
+    </script>
+</body>
+</html> 

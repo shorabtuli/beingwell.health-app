@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Test - Being Well</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-2xl font-bold text-gray-900 mb-6 text-center">Email Test</h1>
+        
+        <!-- Test Form: Serverless Function -->
+        <div class="mb-8">
+            <h2 class="text-lg font-semibold mb-4">Test Serverless Email Function</h2>
+            <form id="email-test-form" class="space-y-4">
+                <input type="email" id="test-email" placeholder="Enter your email" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                <button type="submit" id="submit-btn" 
+                        class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+                    Send Test Email (Serverless)
+                </button>
+            </form>
+            <div id="result" class="mt-4 p-3 rounded-lg hidden"></div>
+        </div>
+
+        <!-- Test Form 2: Mailto -->
+        <div class="mb-8">
+            <h2 class="text-lg font-semibold mb-4">Test Mailto Email</h2>
+            <form class="space-y-4">
+                <input type="email" id="mailto-email" placeholder="Enter your email" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                <button type="button" onclick="sendMailto()" 
+                        class="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">
+                    Send Test Email (Mailto)
+                </button>
+            </form>
+        </div>
+
+        <!-- Test Form 3: Local Storage -->
+        <div>
+            <h2 class="text-lg font-semibold mb-4">Test Local Storage</h2>
+            <form class="space-y-4">
+                <input type="email" id="local-email" placeholder="Enter your email" required 
+                       class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                <button type="button" onclick="storeLocally()" 
+                        class="w-full bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600">
+                    Store Email Locally
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-8 p-4 bg-gray-50 rounded-lg">
+            <h3 class="font-semibold mb-2">Instructions:</h3>
+            <ol class="text-sm text-gray-600 space-y-1">
+                <li>1. <strong>Serverless Function</strong> - Tests the actual email system (requires deployment)</li>
+                <li>2. <strong>Mailto</strong> - Opens your email client for testing</li>
+                <li>3. <strong>Local Storage</strong> - Stores email in browser for testing</li>
+            </ol>
+            <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+                <p class="text-sm text-blue-800">
+                    <strong>Note:</strong> The serverless function will only work after deployment to Vercel with the Resend API key configured.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test serverless email function
+        document.getElementById('email-test-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('test-email').value;
+            const submitBtn = document.getElementById('submit-btn');
+            const resultDiv = document.getElementById('result');
+            
+            if (!email) {
+                showResult('Please enter an email address.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/email-handler', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email
+                    })
+                });
+                
+                if (response.ok) {
+                    showResult('Email sent successfully! Check shorabtuli@gmail.com', 'success');
+                } else {
+                    const errorData = await response.json();
+                    showResult(`Error: ${errorData.message}`, 'error');
+                }
+            } catch (error) {
+                console.error('Error sending email:', error);
+                showResult('Error: Serverless function not available locally. Deploy to Vercel to test.', 'error');
+            } finally {
+                submitBtn.textContent = 'Send Test Email (Serverless)';
+                submitBtn.disabled = false;
+            }
+        });
+        
+        function showResult(message, type) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = message;
+            resultDiv.className = `mt-4 p-3 rounded-lg ${type === 'success' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`;
+            resultDiv.classList.remove('hidden');
+        }
+
+        function sendMailto() {
+            const email = document.getElementById('mailto-email').value;
+            if (!email) {
+                alert('Please enter an email address');
+                return;
+            }
+            
+            const subject = encodeURIComponent('Test Email from Being Well');
+            const body = encodeURIComponent(`Test email from: ${email}\n\nTimestamp: ${new Date().toLocaleString()}`);
+            
+            window.location.href = `mailto:shorabtuli@gmail.com?subject=${subject}&body=${body}`;
+        }
+
+        function storeLocally() {
+            const email = document.getElementById('local-email').value;
+            if (!email) {
+                alert('Please enter an email address');
+                return;
+            }
+            
+            const storedEmails = JSON.parse(localStorage.getItem('visitorEmails') || '[]');
+            storedEmails.push({
+                email: email,
+                timestamp: new Date().toISOString()
+            });
+            localStorage.setItem('visitorEmails', JSON.stringify(storedEmails));
+            
+            alert('Email stored locally! Check browser console for details.');
+            console.log('Stored emails:', storedEmails);
+        }
+    </script>
+</body>
+</html> 
