@@ -1,0 +1,28 @@
+{
+  "name": "being-well-ra-wellness",
+  "version": "1.0.0",
+  "description": "Being Well - Personalized RA Wellness App Landing Page and Blog",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Static site - no build required'",
+    "start": "vercel dev"
+  },
+  "keywords": [
+    "rheumatoid-arthritis",
+    "wellness",
+    "health",
+    "RA",
+    "chronic-pain",
+    "arthritis-management"
+  ],
+  "author": "Being Well Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
