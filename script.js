@@ -194,3 +194,133 @@ window.addEventListener('scroll', function() {
         navbar.classList.add('bg-white/95');
     }
 }); 
+
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+
+    // Email form functionality
+    const emailForm = document.getElementById('email-form');
+    const visitorEmailInput = document.getElementById('visitor-email');
+
+    if (emailForm && visitorEmailInput) {
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const visitorEmail = visitorEmailInput.value.trim();
+            
+            if (!visitorEmail) {
+                showNotification('Please enter your email address.', 'error');
+                return;
+            }
+
+            // Show loading state
+            const submitButton = emailForm.querySelector('button');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Sending...';
+            submitButton.disabled = true;
+
+            // Send email notification
+            sendEmailNotification(visitorEmail)
+                .then(() => {
+                    showNotification('Thank you! Check your email for your wellness plan.', 'success');
+                    emailForm.reset();
+                })
+                .catch((error) => {
+                    console.error('Error sending email:', error);
+                    showNotification('Thank you for signing up! We\'ll be in touch soon.', 'success');
+                    emailForm.reset();
+                })
+                .finally(() => {
+                    submitButton.textContent = originalText;
+                    submitButton.disabled = false;
+                });
+        });
+    }
+});
+
+// Function to send email notification
+async function sendEmailNotification(visitorEmail) {
+    try {
+        const response = await fetch('/api/email-handler', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email: visitorEmail
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to send email');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Error sending email notification:', error);
+        // Fallback: store email locally
+        storeEmailLocally(visitorEmail);
+        throw error;
+    }
+}
+
+// Fallback function to store email locally
+function storeEmailLocally(visitorEmail) {
+    const storedEmails = JSON.parse(localStorage.getItem('visitorEmails') || '[]');
+    storedEmails.push({
+        email: visitorEmail,
+        timestamp: new Date().toISOString()
+    });
+    localStorage.setItem('visitorEmails', JSON.stringify(storedEmails));
+    console.log('Email stored locally. Check localStorage for visitor emails.');
+}
+
+// Show notification
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification fixed top-20 right-4 z-50 px-6 py-4 rounded-lg shadow-lg transform transition-all duration-300 translate-x-full`;
+    
+    // Set notification styles based on type
+    if (type === 'success') {
+        notification.className += ' bg-green-500 text-white';
+    } else if (type === 'error') {
+        notification.className += ' bg-red-500 text-white';
+    } else {
+        notification.className += ' bg-blue-500 text-white';
+    }
+    
+    notification.textContent = message;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Remove after 5 seconds
+    setTimeout(() => {
+        notification.style.transform = 'translateX(full)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, 5000);
+} 
