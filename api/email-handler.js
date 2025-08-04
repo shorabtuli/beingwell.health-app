@@ -31,6 +31,7 @@ export default async function handler(req, res) {
 
         // Using Resend (configured with your API key)
         if (process.env.RESEND_API_KEY) {
+            console.log('Resend API key found, attempting to send email...');
             try {
                 const response = await fetch('https://api.resend.com/emails', {
                     method: 'POST',
@@ -46,6 +47,8 @@ export default async function handler(req, res) {
                     }),
                 });
 
+                console.log('Resend API response status:', response.status);
+                
                 if (response.ok) {
                     console.log('Email sent successfully via Resend');
                     return res.status(200).json({ message: 'Email sent successfully' });
@@ -58,6 +61,8 @@ export default async function handler(req, res) {
                 console.error('Error sending email via Resend:', error);
                 // Continue to fallback options
             }
+        } else {
+            console.log('No Resend API key found');
         }
 
         // Fallback: Using SendGrid (if configured)

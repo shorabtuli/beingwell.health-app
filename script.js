@@ -1,5 +1,22 @@
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Email form handler loaded - version 3.0');
+    
+    // Remove required attribute to prevent HTML5 validation
+    const emailInput = document.getElementById("visitor-email");
+    if (emailInput) {
+        emailInput.removeAttribute("required");
+        emailInput.setAttribute("novalidate", "");
+        console.log("Removed required attribute from email input");
+    }
+    
+    // Prevent any default validation messages
+    const emailFormElement = document.getElementById('email-form');
+    if (emailFormElement) {
+        emailFormElement.setAttribute("novalidate", "");
+        console.log("Added novalidate to form");
+    }
+    
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -92,14 +109,50 @@ document.addEventListener('DOMContentLoaded', function() {
             const emailInput = this.querySelector('input[type="email"]');
             const email = emailInput.value.trim();
             
+            // Clear any existing error messages
+            const existingError = document.querySelector('.error-message');
+            if (existingError) {
+                existingError.remove();
+            }
+            
             if (email && isValidEmail(email)) {
-                // Show success message
-                showNotification('Thank you for subscribing! We\'ll keep you updated.', 'success');
-                emailInput.value = '';
+                // Show loading state
+                const submitButton = this.querySelector('button[type="submit"]');
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Send email notification
+                sendEmailNotification(email)
+                    .then(() => {
+                        showNotification('Thank you! Check your email for your wellness plan.', 'success');
+                        emailForm.reset();
+                    })
+                    .catch((error) => {
+                        console.error('Error sending email:', error);
+                        showNotification('Thank you for signing up! We\'ll be in touch soon.', 'success');
+                        emailForm.reset();
+                    })
+                    .finally(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
             } else {
                 showNotification('Please enter a valid email address.', 'error');
             }
         });
+        
+        // Clear error on input
+        const emailInput = emailForm.querySelector('input[type="email"]');
+        if (emailInput) {
+            emailInput.addEventListener('input', function() {
+                // Clear any existing error messages when user starts typing
+                const existingError = document.querySelector('.error-message');
+                if (existingError) {
+                    existingError.remove();
+                }
+            });
+        }
     }
 });
 
