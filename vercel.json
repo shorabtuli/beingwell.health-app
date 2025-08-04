@@ -14,26 +14,38 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [
+  "redirects": [
     {
-      "src": "/",
-      "dest": "/index.html"
+      "source": "http://www.beingwell.health/:path*",
+      "destination": "https://www.beingwell.health/:path*",
+      "permanent": true
     },
     {
-      "src": "/blog",
-      "dest": "/blog.html"
+      "source": "http://beingwell.health/:path*",
+      "destination": "https://www.beingwell.health/:path*",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
     },
     {
-      "src": "/blog-posts/(.*)",
-      "dest": "/blog-posts/$1"
+      "source": "/blog",
+      "destination": "/blog.html"
     },
     {
-      "src": "/(.*\\.html)",
-      "dest": "/$1"
+      "source": "/blog-posts/(.*)",
+      "destination": "/blog-posts/$1"
     },
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "source": "/(.*\\.html)",
+      "destination": "/$1"
+    },
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     }
   ],
   "headers": [
