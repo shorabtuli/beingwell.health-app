@@ -14,43 +14,31 @@
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
+  "routes": [
     {
-      "source": "http://www.beingwell.health/:path*",
-      "destination": "https://www.beingwell.health/:path*",
-      "permanent": true
+      "src": "/",
+      "dest": "/index.html"
     },
     {
-      "source": "http://beingwell.health/:path*",
-      "destination": "https://www.beingwell.health/:path*",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
+      "src": "/blog",
+      "dest": "/blog.html"
     },
     {
-      "source": "/blog",
-      "destination": "/blog.html"
+      "src": "/blog-posts/(.*)",
+      "dest": "/blog-posts/$1"
     },
     {
-      "source": "/blog-posts/(.*)",
-      "destination": "/blog-posts/$1"
+      "src": "/(.*\\.html)",
+      "dest": "/$1"
     },
     {
-      "source": "/(.*\\.html)",
-      "destination": "/$1"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
     }
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "src": "/(.*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -67,7 +55,7 @@
       ]
     },
     {
-      "source": "/(.*\\.html)",
+      "src": "/(.*\\.html)",
       "headers": [
         {
           "key": "Cache-Control",
