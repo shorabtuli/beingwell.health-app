@@ -31,6 +31,11 @@
       "permanent": true
     },
     {
+      "source": "/active-lifestyle-arthritis.html",
+      "destination": "/blog-posts/active-lifestyle-arthritis.html",
+      "permanent": true
+    },
+    {
       "source": "/how-to-reduce-morning-joint-stiffness.html",
       "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
       "permanent": true
