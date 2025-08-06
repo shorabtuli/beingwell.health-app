@@ -1,6 +1,6 @@
 // Serverless function to send email notifications
 // Deploy this to Vercel, Netlify, or similar platforms
-// Updated: Force redeploy to fix 404 error - Vercel deployment test
+// Updated: Use Node.js built-in https module for better Vercel compatibility
 
 module.exports = async (req, res) => {
     if (req.method !== 'POST') {
@@ -33,18 +33,47 @@ module.exports = async (req, res) => {
         // Using Resend (free tier available)
         if (process.env.RESEND_API_KEY) {
             try {
-                const response = await fetch('https://api.resend.com/emails', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        from: 'onboarding@resend.dev', // Use Resend's default domain
+                const https = require('https');
+                const response = await new Promise((resolve, reject) => {
+                    const data = JSON.stringify({
+                        from: 'onboarding@resend.dev',
                         to: emailData.to,
                         subject: emailData.subject,
                         html: emailData.html,
-                    }),
+                    });
+
+                    const options = {
+                        hostname: 'api.resend.com',
+                        port: 443,
+                        path: '/emails',
+                        method: 'POST',
+                        headers: {
+                            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                            'Content-Type': 'application/json',
+                            'Content-Length': Buffer.byteLength(data)
+                        }
+                    };
+
+                    const req = https.request(options, (res) => {
+                        let responseData = '';
+                        res.on('data', (chunk) => {
+                            responseData += chunk;
+                        });
+                        res.on('end', () => {
+                            resolve({
+                                ok: res.statusCode >= 200 && res.statusCode < 300,
+                                status: res.statusCode,
+                                json: () => JSON.parse(responseData)
+                            });
+                        });
+                    });
+
+                    req.on('error', (error) => {
+                        reject(error);
+                    });
+
+                    req.write(data);
+                    req.end();
                 });
 
                 const responseData = await response.json();
