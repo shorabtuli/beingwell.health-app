@@ -19,6 +19,21 @@
       "source": "/index.html",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/arthritis-app-subscription.html",
+      "destination": "/blog-posts/arthritis-app-subscription.html",
+      "permanent": true
+    },
+    {
+      "source": "/mental-health-arthritis.html",
+      "destination": "/blog-posts/mental-health-arthritis.html",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-reduce-morning-joint-stiffness.html",
+      "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
+      "permanent": true
     }
   ],
   "rewrites": [
