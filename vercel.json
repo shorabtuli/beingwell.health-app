@@ -10,26 +10,6 @@
       "use": "@vercel/static"
     },
     {
-      "src": "sitemap.xml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "favicon.ico",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "favicon-*.png",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "apple-touch-icon.png",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
-    {
       "src": "api/*.js",
       "use": "@vercel/node"
     }
@@ -46,42 +26,6 @@
     {
       "source": "/blog",
       "destination": "/blog.html"
-    },
-    {
-      "source": "/blog-posts/(.*)",
-      "destination": "/blog-posts/$1"
-    },
-    {
-      "source": "/(.*\\.html)",
-      "destination": "/$1"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        }
-      ]
-    },
-    {
-      "source": "/(.*\\.html)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
-        }
-      ]
     }
   ]
 } 
