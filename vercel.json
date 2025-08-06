@@ -57,7 +57,7 @@
     },
     {
       "source": "/blog-posts/category/advanced.html",
-      "destination": "/blog-posts/surgery-preparation-recovery-ra-complete-guide.html",
+      "destination": "/blog-posts/meditation-for-ra-pain-complete-guide.html",
       "permanent": true
     },
     {
@@ -88,6 +88,21 @@
     {
       "source": "/blog-posts/category/mental-health.html",
       "destination": "/blog-posts/anxiety-relief-arthritis.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/meditation.html",
+      "destination": "/blog-posts/meditation-for-ra-pain-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/comorbidity.html",
+      "destination": "/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/community.html",
+      "destination": "/blog-posts/community-support-chronic-illness-diet-beginners.html",
       "permanent": true
     }
   ],
