@@ -1536,6 +1536,37 @@
 </main>
 
     <script>
+        // Category filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.bg-gray-100, .bg-primary');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active state from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    
+                    // Add active state to clicked button
+                    this.classList.remove('bg-gray-100', 'text-gray-700');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    // Get the filter value
+                    const filterValue = this.textContent.trim();
+                    
+                    // Here you would typically filter the content based on the selected category
+                    // For now, we'll just show a console message
+                    console.log('Filter selected:', filterValue);
+                    
+                    // You can add actual filtering logic here
+                    // For example, show/hide articles based on their category
+                });
+            });
+        });
+    </script>
+
+    <script>
         // Track scroll depth
         let maxScroll = 0;
         window.addEventListener('scroll', () => {
