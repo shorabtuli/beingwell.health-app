@@ -34,6 +34,41 @@
       "source": "/how-to-reduce-morning-joint-stiffness.html",
       "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
       "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/research.html",
+      "destination": "/blog-posts/arthritis-research-latest-findings.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/treatments.html",
+      "destination": "/blog-posts/treatment-plan-arthritis.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/success-stories.html",
+      "destination": "/blog-posts/arthritis-success-stories.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/beginners.html",
+      "destination": "/blog-posts/ra-management-beginners-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/advanced.html",
+      "destination": "/blog-posts/surgery-preparation-recovery-ra-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/specialized.html",
+      "destination": "/blog-posts/journaling-ra-mental-health-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/education.html",
+      "destination": "/blog-posts/online-arthritis-education.html",
+      "permanent": true
     }
   ],
   "headers": [
