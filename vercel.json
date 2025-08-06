@@ -69,6 +69,26 @@
       "source": "/blog-posts/category/education.html",
       "destination": "/blog-posts/online-arthritis-education.html",
       "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/pain-management.html",
+      "destination": "/blog-posts/hand-arthritis-exercises-for-pain-relief.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/exercise.html",
+      "destination": "/blog-posts/gentle-exercise-routines-chronic-pain.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/nutrition.html",
+      "destination": "/blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/mental-health.html",
+      "destination": "/blog-posts/anxiety-relief-arthritis.html",
+      "permanent": true
     }
   ],
   "headers": [
