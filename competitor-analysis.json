@@ -1,0 +1,86 @@
+{
+  "timestamp": "2025-08-05T15:08:03.809Z",
+  "contentGaps": [
+    "RA-specific exercise routines",
+    "Anti-inflammatory meal planning",
+    "Flare management strategies",
+    "Joint protection techniques",
+    "RA community support",
+    "pregnancy and RA management",
+    "workplace accommodation strategies",
+    "surgery preparation and recovery",
+    "comorbidity management (diabetes, heart disease)",
+    "mental health and depression support"
+  ],
+  "keywordOpportunities": [
+    {
+      "keyword": "rheumatoid arthritis morning stiffness",
+      "volume": "high",
+      "difficulty": "medium"
+    },
+    {
+      "keyword": "RA flare management techniques",
+      "volume": "high",
+      "difficulty": "low"
+    },
+    {
+      "keyword": "arthritis exercise routines",
+      "volume": "very high",
+      "difficulty": "medium"
+    },
+    {
+      "keyword": "anti-inflammatory diet RA",
+      "volume": "high",
+      "difficulty": "low"
+    },
+    {
+      "keyword": "rheumatoid arthritis pregnancy",
+      "volume": "medium",
+      "difficulty": "low"
+    },
+    {
+      "keyword": "RA medication side effects",
+      "volume": "high",
+      "difficulty": "medium"
+    },
+    {
+      "keyword": "arthritis workplace accommodations",
+      "volume": "medium",
+      "difficulty": "low"
+    },
+    {
+      "keyword": "RA mental health support",
+      "volume": "medium",
+      "difficulty": "low"
+    }
+  ],
+  "recommendations": [
+    "Create pregnancy and RA management content",
+    "Add workplace accommodation resources",
+    "Develop medication tracking features",
+    "Implement flare management tools",
+    "Create community support features"
+  ],
+  "competitors": {
+    "healthcare_apps": [
+      "https://www.myfitnesspal.com",
+      "https://www.cronometer.com",
+      "https://www.loseit.com",
+      "https://www.noom.com",
+      "https://www.weightwatchers.com"
+    ],
+    "arthritis_sites": [
+      "https://www.arthritis.org",
+      "https://www.rheumatoidarthritis.org",
+      "https://www.creakyjoints.org",
+      "https://www.arthritis-health.com",
+      "https://www.arthritis.com"
+    ],
+    "ra_specific": [
+      "https://www.rheumatoidarthritis.org",
+      "https://www.arthritis.org/diseases/rheumatoid-arthritis",
+      "https://www.mayoclinic.org/diseases-conditions/rheumatoid-arthritis",
+      "https://www.webmd.com/rheumatoid-arthritis"
+    ]
+  }
+}

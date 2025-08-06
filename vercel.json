@@ -14,23 +14,31 @@
       "use": "@vercel/static"
     },
     {
+      "src": "favicon.ico",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "favicon-*.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
       "src": "api/*.js",
       "use": "@vercel/node"
     }
   ],
-  "redirects": [
-    {
-      "source": "http://www.beingwell.health/:path*",
-      "destination": "https://www.beingwell.health/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://beingwell.health/:path*",
-      "destination": "https://www.beingwell.health/:path*",
-      "permanent": true
-    }
-  ],
   "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    },
     {
       "source": "/",
       "destination": "/index.html"
@@ -46,10 +54,6 @@
     {
       "source": "/(.*\\.html)",
       "destination": "/$1"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
     }
   ],
   "headers": [

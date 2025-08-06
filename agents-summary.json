@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-08-05T15:08:05.484Z",
+  "totalAgents": 4,
+  "successful": 4,
+  "failed": 0,
+  "results": [
+    {
+      "agent": "agent-alt-text-finder.js",
+      "status": "success",
+      "duration": 0.489
+    },
+    {
+      "agent": "agent-competitor-analyzer.js",
+      "status": "success",
+      "duration": 0.282
+    },
+    {
+      "agent": "agent-meta-description-auditor.js",
+      "status": "success",
+      "duration": 0.991
+    },
+    {
+      "agent": "agent-content-length-auditor.js",
+      "status": "success",
+      "duration": 0.622
+    }
+  ]
+}

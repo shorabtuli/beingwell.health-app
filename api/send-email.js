@@ -1,7 +1,8 @@
 // Serverless function to send email notifications
 // Deploy this to Vercel, Netlify, or similar platforms
+// Updated: Force redeploy to fix 404 error - Vercel deployment test
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
     if (req.method !== 'POST') {
         return res.status(405).json({ message: 'Method not allowed' });
     }
@@ -15,7 +16,7 @@ export default async function handler(req, res) {
 
         // Using a simple email service (you can replace with your preferred service)
         const emailData = {
-            to: 'shorabtuli@gmail.com',
+            to: 'shorabtuli1975@gmail.com', // Use your verified email address
             subject: 'New Being Well Visitor Signup',
             html: `
                 <h2>New Being Well Visitor Signup</h2>
@@ -32,22 +33,32 @@ export default async function handler(req, res) {
         // Option 1: Using Resend (recommended - free tier available)
         // You'll need to sign up at resend.com and get an API key
         if (process.env.RESEND_API_KEY) {
-            const response = await fetch('https://api.resend.com/emails', {
-                method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    from: 'noreply@beingwell.health',
-                    to: emailData.to,
-                    subject: emailData.subject,
-                    html: emailData.html,
-                }),
-            });
+            try {
+                const response = await fetch('https://api.resend.com/emails', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        from: 'onboarding@resend.dev', // Use Resend's default domain
+                        to: emailData.to,
+                        subject: emailData.subject,
+                        html: emailData.html,
+                    }),
+                });
 
-            if (response.ok) {
-                return res.status(200).json({ message: 'Email sent successfully' });
+                const responseData = await response.json();
+                
+                if (response.ok) {
+                    return res.status(200).json({ message: 'Email sent successfully', resendId: responseData.id });
+                } else {
+                    console.error('Resend API error:', responseData);
+                    return res.status(500).json({ message: 'Resend API error', error: responseData });
+                }
+            } catch (error) {
+                console.error('Resend fetch error:', error);
+                return res.status(500).json({ message: 'Resend fetch error', error: error.message });
             }
         }
 

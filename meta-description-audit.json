@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-08-05T15:08:04.829Z",
+  "totalFiles": 465,
+  "duplicatesFound": 6,
+  "filesUpdated": 6,
+  "duplicates": [
+    {
+      "description": "Discover nutrition strategies and meal plans to reduce inflammation and support your immune system. Learn anti-inflammatory meal planning for autoimmune conditions.",
+      "files": [
+        "blog-posts/anti-inflammatory-meal-planning-autoimmune.html",
+        "blog-posts/blog-post-4.html"
+      ],
+      "count": 2
+    },
+    {
+      "description": "Discover low-impact workouts designed specifically for managing chronic pain and improving mobility. Learn gentle exercise routines that work with your energy levels.",
+      "files": [
+        "blog-posts/blog-post-2.html",
+        "blog-posts/gentle-exercise-routines-chronic-pain.html"
+      ],
+      "count": 2
+    },
+    {
+      "description": "Learn simple meditation techniques that help reduce stress and improve mental wellness for people with chronic conditions. Discover mindfulness practices that work with your symptoms.",
+      "files": [
+        "blog-posts/blog-post-3.html",
+        "blog-posts/mindfulness-meditation-chronic-conditions.html"
+      ],
+      "count": 2
+    },
+    {
+      "description": "Discover practical strategies to improve sleep quality and manage chronic fatigue symptoms. Learn sleep hygiene tips designed specifically for people with chronic conditions.",
+      "files": [
+        "blog-posts/blog-post-5.html",
+        "blog-posts/sleep-hygiene-tips-chronic-fatigue.html"
+      ],
+      "count": 2
+    },
+    {
+      "description": "Learn how to connect with others who understand your journey and build meaningful support networks. Discover online and offline communities for people with chronic conditions.",
+      "files": [
+        "blog-posts/blog-post-6.html",
+        "blog-posts/finding-support-communities-chronic-illness.html"
+      ],
+      "count": 2
+    },
+    {
+      "description": "Learn proven techniques to reduce morning stiffness from rheumatoid arthritis. Get your personalized RA wellness plan from Being Well today.",
+      "files": [
+        "blog-posts/blog-post-7.html",
+        "blog-posts/how-reduce-morning-stiffness-rheumatoid-arthritis.html"
+      ],
+      "count": 2
+    }
+  ],
+  "fixedFiles": [
+    "blog-posts/blog-post-4.html",
+    "blog-posts/gentle-exercise-routines-chronic-pain.html",
+    "blog-posts/mindfulness-meditation-chronic-conditions.html",
+    "blog-posts/sleep-hygiene-tips-chronic-fatigue.html",
+    "blog-posts/finding-support-communities-chronic-illness.html",
+    "blog-posts/how-reduce-morning-stiffness-rheumatoid-arthritis.html"
+  ]
+}

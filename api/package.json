@@ -1,0 +1,14 @@
+{
+  "name": "beingwell-api",
+  "version": "1.0.0",
+  "description": "API functions for Being Well website",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "nodemailer": "^6.9.0",
+    "resend": "^2.0.0"
+  }
+} 

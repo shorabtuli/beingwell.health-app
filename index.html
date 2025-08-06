@@ -4,14 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
     <!-- Enhanced Title Tag -->
     <title>Being Well | RA Wellness App - Personalized Daily Plans for Rheumatoid Arthritis</title>
     
     <!-- Enhanced Meta Description -->
     <meta name="description" content="Finally, a wellness app that understands your RA journey. Personalized daily plans that adapt to your pain levels, energy, and goals. Built by someone who gets it.">
     
+    <!-- Keywords -->
+    <meta name="keywords" content="rheumatoid arthritis app, RA wellness, arthritis management, chronic pain relief, personalized health plans, arthritis support">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.beingwell.health/">
+    <link rel="canonical" href="https://www.beingwell.health/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Being Well | RA Wellness App - Personalized Daily Plans for Rheumatoid Arthritis">
+    <meta property="og:description" content="Finally, a wellness app that understands your RA journey. Personalized daily plans that adapt to your pain levels, energy, and goals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.beingwell.health/">
+    <meta property="og:image" content="https://www.beingwell.health/images/being-well-app-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Being Well">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Being Well | RA Wellness App">
+    <meta name="twitter:description" content="Personalized daily plans for rheumatoid arthritis management. Built by someone who gets it.">
+    <meta name="twitter:image" content="https://www.beingwell.health/images/being-well-app-preview.jpg">
+    <meta name="twitter:site" content="@beingwellhealth">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Critical CSS - Inline Tailwind for above-the-fold content -->
+    <style>
+        /* Critical styles for above-the-fold content */
+        .font-sans { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .text-gray-900 { color: #111827; }
+        .bg-white { background-color: #ffffff; }
+        .bg-gradient-to-br { background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+        .from-purple-600 { --tw-gradient-from: #9333ea; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(147, 51, 234, 0)); }
+        .to-purple-800 { --tw-gradient-to: #6b21a8; }
+        .text-white { color: #ffffff; }
+        .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+        .font-bold { font-weight: 700; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .max-w-7xl { max-width: 80rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .pt-20 { padding-top: 5rem; }
+        .pb-16 { padding-bottom: 4rem; }
+        .text-center { text-align: center; }
+        .fixed { position: fixed; }
+        .top-0 { top: 0px; }
+        .w-full { width: 100%; }
+        .z-50 { z-index: 50; }
+        .bg-white\/95 { background-color: rgba(255, 255, 255, 0.95); }
+        .backdrop-blur-sm { backdrop-filter: blur(4px); }
+        .border-b { border-bottom-width: 1px; }
+        .border-gray-200 { border-color: #e5e7eb; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .h-16 { height: 4rem; }
+        .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+        .text-gray-600 { color: #4b5563; }
+        .hover\:text-primary:hover { color: #6366f1; }
+        .transition-colors { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+        .px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .rounded-md { border-radius: 0.375rem; }
+        .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+        .font-medium { font-weight: 500; }
+        .hidden { display: none; }
+        .md\:block { display: block; }
+        .md\:hidden { display: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+        .focus\:not-sr-only:focus { position: static; width: auto; height: auto; padding: 0.5rem 1rem; margin: 0; overflow: visible; clip: auto; white-space: normal; }
+        .focus\:absolute:focus { position: absolute; }
+        .focus\:top-4:focus { top: 1rem; }
+        .focus\:left-4:focus { left: 1rem; }
+        .bg-primary { background-color: #6366f1; }
+        .text-white { color: #ffffff; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+        .rounded { border-radius: 0.25rem; }
+        .z-50 { z-index: 50; }
+        
+        /* Primary color variables */
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --secondary: #8b5cf6;
+            --secondary-light: #a78bfa;
+        }
+    </style>
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -20,43 +124,222 @@
       "@type": "WebSite",
       "name": "Being Well",
       "url": "https://www.beingwell.health",
+      "description": "Personalized RA wellness app with daily plans that adapt to your pain levels and energy",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://www.beingwell.health/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Being Well",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.beingwell.health/logo.png"
+        }
       }
     }
     </script>
     
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Being Well?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Being Well is a personalized wellness app designed specifically for people with rheumatoid arthritis. It creates daily plans that adapt to your pain levels, energy, and goals, helping you manage your RA more effectively and improve your quality of life."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Being Well work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The app learns your patterns and creates personalized daily plans that include gentle exercises, nutrition tips, stress management techniques, and medication reminders. It adapts to your energy levels and pain symptoms, ensuring you get the right support when you need it most."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Being Well free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Being Well offers a free forever plan that includes basic features like personalized daily plans, symptom tracking, and educational content. Premium features are available for advanced analytics and additional support, but the core functionality is completely free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will Being Well replace my doctor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, Being Well is designed to complement your medical care, not replace it. The app helps you track symptoms, manage daily wellness, and make informed decisions about your health. Always consult with your healthcare provider for medical advice and treatment decisions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Getting started is easy! Simply download the app, create your profile, and answer a few questions about your RA symptoms and goals. The app will then create your first personalized wellness plan and guide you through your RA management journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my health data secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. Your privacy and data security are our top priorities. All health data is encrypted and stored securely. You have complete control over your information and can delete your data at any time. We never share your personal health information with third parties."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Being Well with other RA apps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Being Well is designed to work alongside other health apps and tools you might be using. You can export your data and share insights with your healthcare team. The app focuses on comprehensive wellness rather than just symptom tracking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I have a flare-up?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Being Well includes special flare-up management features. When you report increased symptoms, the app automatically adjusts your daily plan to include more gentle activities, pain management techniques, and rest recommendations. It also helps you track flare patterns to identify triggers."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Defer non-critical CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Load Tailwind CSS immediately -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+
+
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EXZ3HZTY6"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        secondary: '#8b5cf6',
-                        accent: '#06b6d4',
-                        success: '#10b981',
-                        warning: '#f59e0b',
-                        error: '#ef4444',
-                        neutral: '#6b7280',
-                        'primary-light': '#818cf8',
-                        'secondary-light': '#a78bfa',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9EXZ3HZTY6', {
+            page_title: document.title,
+            page_location: window.location.href,
+            custom_map: {
+                'custom_parameter_1': 'article_category',
+                'custom_parameter_2': 'content_type'
             }
+        });
+        
+        // Track article reads
+        function trackArticleRead(articleTitle, category) {
+            gtag('event', 'article_read', {
+                'article_title': articleTitle,
+                'article_category': category,
+                'content_type': 'blog_post'
+            });
+        }
+        
+        // Track external link clicks
+        function trackExternalLink(url, linkText) {
+            gtag('event', 'external_link_click', {
+                'link_url': url,
+                'link_text': linkText
+            });
+        }
+        
+        // Track internal navigation
+        function trackInternalNav(pageName) {
+            gtag('event', 'internal_navigation', {
+                'page_name': pageName
+            });
+        }
+        
+        // Auto-track article reads after 30 seconds
+        if (document.title.includes('arthritis') || document.title.includes('RA')) {
+            setTimeout(() => {
+                trackArticleRead(document.title, 'arthritis_management');
+            }, 30000);
+        }
+        
+        // Track wellness plan signups and send email via Resend
+        function trackWellnessSignup(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            const form = event.target;
+            
+            // Show loading state
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            submitButton.disabled = true;
+            
+            // Track in Google Analytics
+            gtag('event', 'wellness_plan_signup', {
+                'email_provided': email ? 'yes' : 'no',
+                'signup_location': 'hero_section',
+                'page_title': document.title
+            });
+            
+            // Send email via Resend API
+            fetch('/api/send-email.js', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    visitorEmail: email
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('SUCCESS!', data);
+                
+                // Show success message
+                form.innerHTML = '<div class="text-center text-green-600"><i class="fas fa-check-circle text-2xl mb-2"></i><p class="font-semibold">Thank you for signing up!</p><p class="text-sm">Check your email for your personalized wellness plan.</p></div>';
+            })
+            .catch(error => {
+                console.log('FAILED...', error);
+                
+                // Show error message
+                form.innerHTML = '<div class="text-center text-red-600"><i class="fas fa-exclamation-circle text-2xl mb-2"></i><p class="font-semibold">Something went wrong</p><p class="text-sm">Please try again or contact us directly.</p><button onclick="location.reload()" class="mt-2 bg-purple-600 text-white px-4 py-2 rounded">Try Again</button></div>';
+            });
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="font-sans text-gray-900 bg-white">
+    
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    </head>
+<body$1>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
+        Skip to main content
+    </a>
+    
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" role="navigation" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -74,83 +357,68 @@
                         <a href="#features" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Features</a>
                         <a href="#how-it-works" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">How It Works</a>
                         <a href="#community" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Community</a>
-                        <a href="blog.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog</a>
+                        <a href="blog.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors" onclick="trackInternalNav('blog.html')">Blog</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary">
-                        <i class="fas fa-bars text-xl"></i>
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+                        <i class="fas fa-bars text-xl" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200" role="menu" aria-label="Mobile navigation menu">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#features" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Features</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">How It Works</a>
-                <a href="#community" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Community</a>
-                <a href="blog.html" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blog</a>
+                <a href="#features" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Features</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium" role="menuitem">How It Works</a>
+                <a href="#community" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium" role="menuitem">Community</a>
+                <a href="blog.html" class="text-gray-600 hover:text-primary block px-3 py-2 rounded-md text-base font-medium" role="menuitem" onclick="trackInternalNav('blog.html')">Blog</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="space-y-4">
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                            Finally, a wellness app that understands your RA journey
-                        </h1>
-                        <p class="text-xl text-purple-100 leading-relaxed">
-                            Personalized daily plans that adapt to your pain levels, energy, and goals. Built by someone who gets it.
-                        </p>
-                    </div>
-                    
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#assessment" class="inline-flex items-center justify-center px-8 py-4 bg-white text-purple-700 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
-                            Start Your Free Wellness Assessment
-                        </a>
-                        <a href="#demo" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-purple-700 transition-all duration-200">
-                            Watch Demo
-                        </a>
-                    </div>
-
-                    <div class="flex items-center space-x-6 text-sm text-purple-200">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-star text-yellow-300" aria-hidden="true"></i>
-                            <span>Created by an RA patient, backed by medical research</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="relative">
-                    <div class="grid grid-cols-2 gap-4">
-                        <!-- Split-screen visual: Struggling vs Thriving -->
-                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                            <div class="text-center">
-                                <i class="fas fa-frown text-red-300 text-4xl mb-4" aria-hidden="true"></i>
-                                <h3 class="text-white font-semibold mb-2">Generic Apps</h3>
-                                <p class="text-purple-200 text-sm">One-size-fits-all routines that don't understand your pain</p>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Finally, a wellness app that <span class="text-yellow-300">understands your RA journey</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+                        Personalized daily plans that adapt to your pain levels, energy, and goals. Built by someone who gets it.
+                    </p>
+                    <div class="max-w-md mx-auto">
+                        <form class="bg-white rounded-xl p-6 shadow-lg" onsubmit="trackWellnessSignup(event)">
+                            <div class="mb-4">
+                                <input 
+                                    type="email" 
+                                    placeholder="Enter your email address" 
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    required
+                                >
                             </div>
-                        </div>
-                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                            <div class="text-center">
-                                <i class="fas fa-smile text-green-300 text-4xl mb-4" aria-hidden="true"></i>
-                                <h3 class="text-white font-semibold mb-2">Being Well</h3>
-                                <p class="text-purple-200 text-sm">Adapts to your daily energy and pain levels</p>
+                            <button 
+                                type="submit" 
+                                class="w-full bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-700 transition-all duration-200"
+                            >
+                                Start Free Wellness Plan
+                            </button>
+                            <div class="mt-3 text-center text-sm text-gray-600">
+                                <p>✨ Free forever plan available</p>
+                                <p>• Cancel anytime</p>
+                                <p>• Your data stays private</p>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="mt-4 text-center">
-                        <p class="text-purple-200 text-sm">Available on iOS & Android</p>
-                    </div>
+                    <p class="text-white/80 mt-4 text-sm">
+                        ✨ Free forever plan • No credit card required • Cancel anytime
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Problem/Solution Section -->
     <section class="py-20 bg-white">
@@ -164,7 +432,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <!-- Problem Side -->
                 <div class="space-y-6">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">The Problem</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Studies from the Arthritis Foundation (2023) show that the problem</h3>
                     <div class="space-y-4">
                         <div class="flex items-start space-x-3">
                             <i class="fas fa-times-circle text-red-500 text-xl mt-1" aria-hidden="true"></i>
@@ -197,6 +465,7 @@
                     </div>
                 </div>
 
+                <!-- COMMENT BY AUTHOR-->
                 <!-- Solution Side -->
                 <div class="space-y-6">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Being Well is different:</h3>
@@ -532,7 +801,11 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Featured Blog Post 1 -->
                 <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                            <picture>
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80&fm=webp" media="(max-width: 640px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80&fm=webp" media="(max-width: 1024px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=750&q=80&fm=webp" type="image/webp">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&fm=webp" 
                          alt="Morning stiffness relief" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -541,62 +814,54 @@
                             <span>5 min read</span>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="hover:text-primary transition-colors">
+                            <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="hover:text-primary transition-colors" onclick="trackInternalNav('blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html')">
                                 How to Reduce Morning Stiffness from RA
                             </a>
                         </h3>
                         <p class="text-gray-600 mb-4">
                             "Do you wake up feeling like your joints are frozen in place? Learn proven techniques to reduce morning stiffness from rheumatoid arthritis and start your day feeling more mobile and comfortable."
                         </p>
-                        <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="text-primary font-semibold hover:underline">
+                        <a href="blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html" class="text-primary font-semibold hover:underline text-blue-700 hover:text-blue-800" onclick="trackInternalNav('blog-posts/how-to-reduce-morning-stiffness-rheumatoid-arthritis.html')">
                             Read Full Article →
                         </a>
                     </div>
                 </article>
-
-                <!-- Featured Blog Post 2 -->
-                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Hand arthritis exercises" class="w-full h-48 object-cover">
+                
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200">
+                                            <picture>
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80&fm=webp" media="(max-width: 640px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80&fm=webp" media="(max-width: 1024px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=750&q=80&fm=webp" type="image/webp">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80&fm=webp" alt="Hand arthritis exercises for pain relief" class="w-full h-48 object-cover" loading="lazy">
+                        </picture>
                     <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Exercise</span>
-                            <span class="mx-2">•</span>
-                            <span>4 min read</span>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Exercise</span>
+                            <span class="text-gray-500 text-sm">4 min read</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="hover:text-primary transition-colors">
-                                Hand Arthritis Exercises for Pain Relief
-                            </a>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            "Hand arthritis can make everyday tasks feel impossible. Discover gentle hand exercises that provide real pain relief and help maintain function."
-                        </p>
-                        <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="text-primary font-semibold hover:underline">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Hand Arthritis Exercises for Pain Relief</h3>
+                        <p class="text-gray-600 mb-4">"Hand arthritis can make everyday tasks challenging, but gentle exercises can help maintain mobility and reduce pain."</p>
+                        <a href="blog-posts/hand-arthritis-exercises-for-pain-relief.html" class="text-primary font-semibold hover:underline text-blue-700 hover:text-blue-800" onclick="trackInternalNav('blog-posts/hand-arthritis-exercises-for-pain-relief.html')">
                             Read Full Article →
                         </a>
                     </div>
                 </article>
-
-                <!-- Featured Blog Post 3 -->
-                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                         alt="Chair exercises for arthritis" class="w-full h-48 object-cover">
+                
+                <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-200">
+                                            <picture>
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80&fm=webp" media="(max-width: 640px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500&q=80&fm=webp" media="(max-width: 1024px)" type="image/webp">
+                            <source srcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=750&q=80&fm=webp" type="image/webp">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80&fm=webp" alt="Chair exercises for arthritis patients" class="w-full h-48 object-cover" loading="lazy">
+                        </picture>
                     <div class="p-6">
-                        <div class="flex items-center text-sm text-gray-500 mb-3">
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Exercise</span>
-                            <span class="mx-2">•</span>
-                            <span>4 min read</span>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Exercise</span>
+                            <span class="text-gray-500 text-sm">4 min read</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">
-                            <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="hover:text-primary transition-colors">
-                                Chair Exercises for Arthritis Patients
-                            </a>
-                        </h3>
-                        <p class="text-gray-600 mb-4">
-                            "Exercise is crucial for managing arthritis, but traditional workouts can be challenging. Discover safe, effective chair exercises designed specifically for arthritis patients."
-                        </p>
-                        <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="text-primary font-semibold hover:underline">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Chair Exercises for Arthritis Patients</h3>
+                        <p class="text-gray-600 mb-4">"Exercise is crucial for RA management, but it needs to be safe and accessible. These chair-based exercises provide effective workouts without straining your joints."</p>
+                        <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="text-primary font-semibold hover:underline text-blue-700 hover:text-blue-800" onclick="trackInternalNav('blog-posts/chair-exercises-for-arthritis-patients.html')">
                             Read Full Article →
                         </a>
                     </div>
@@ -604,9 +869,208 @@
             </div>
 
             <div class="text-center">
-                <a href="blog.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-200">
+                <a href="blog.html" class="inline-block bg-gradient-to-r from-primary to-secondary text-white font-semibold px-8 py-4 rounded-xl hover:shadow-lg transition-all duration-200" onclick="trackInternalNav('blog.html')">
                     Browse All 400+ Articles
                 </a>
+                <p class="mt-4 text-gray-600">
+                    <a href="blog-posts/how-to-reduce-morning-joint-stiffness.html" class="text-primary hover:underline" onclick="trackInternalNav('blog-posts/how-to-reduce-morning-joint-stiffness.html')">Morning stiffness relief</a> • 
+                    <a href="blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html" class="text-primary hover:underline" onclick="trackInternalNav('blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html')">Anti-inflammatory diet</a> • 
+                    <a href="blog-posts/chair-exercises-for-arthritis-patients.html" class="text-primary hover:underline" onclick="trackInternalNav('blog-posts/chair-exercises-for-arthritis-patients.html')">Chair exercises</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Everything you need to know about Being Well and RA management
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">What is Being Well?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Being Well is a personalized wellness app designed specifically for people with rheumatoid arthritis. 
+                        It creates daily plans that adapt to your pain levels, energy, and goals, helping you manage your RA 
+                        more effectively and improve your quality of life.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">How does Being Well work?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        The app learns your patterns and creates personalized daily plans that include gentle exercises, 
+                        nutrition tips, stress management techniques, and medication reminders. It adapts to your energy 
+                        levels and pain symptoms, ensuring you get the right support when you need it most.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Is Being Well free to use?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes! Being Well offers a free forever plan that includes basic features like personalized daily plans, 
+                        symptom tracking, and educational content. Premium features are available for advanced analytics and 
+                        additional support, but the core functionality is completely free.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Will Being Well replace my doctor?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        No, Being Well is designed to complement your medical care, not replace it. The app helps you track 
+                        symptoms, manage daily wellness, and make informed decisions about your health. Always consult with 
+                        your healthcare provider for medical advice and treatment decisions.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">How do I get started?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Getting started is easy! Simply download the app, create your profile, and answer a few questions 
+                        about your RA symptoms and goals. The app will then create your first personalized wellness plan and 
+                        guide you through your RA management journey.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Is my health data secure?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Absolutely. Your privacy and data security are our top priorities. All health data is encrypted and 
+                        stored securely. You have complete control over your information and can delete your data at any time. 
+                        We never share your personal health information with third parties.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Can I use Being Well with other RA apps?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Yes! Being Well is designed to work alongside other health apps and tools you might be using. You can 
+                        export your data and share insights with your healthcare team. The app focuses on comprehensive wellness 
+                        rather than just symptom tracking.
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">What if I have a flare-up?</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Being Well includes special flare-up management features. When you report increased symptoms, the app 
+                        automatically adjusts your daily plan to include more gentle activities, pain management techniques, and 
+                        rest recommendations. It also helps you track flare patterns to identify triggers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specialized RA Management Section -->
+    <section id="specialized-management" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Specialized RA Management Features
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Comprehensive tools designed specifically for rheumatoid arthritis challenges
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pregnancy and RA Management -->
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl p-8 border border-pink-200">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-baby text-pink-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Pregnancy & RA Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialized tracking and guidance for managing RA during pregnancy and postpartum. 
+                        Medication safety, exercise modifications, and symptom monitoring designed for expectant mothers.
+                    </p>
+                    <a href="blog-posts/ra-pregnancy-management.html" class="text-pink-600 font-semibold hover:text-pink-700" onclick="trackInternalNav('blog-posts/ra-pregnancy-management.html')">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Workplace Accommodations -->
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-blue-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Workplace Accommodations</h3>
+                    <p class="text-gray-600 mb-4">
+                        Tools and resources to help you request and implement workplace accommodations. 
+                        Ergonomic recommendations, legal guidance, and communication strategies.
+                    </p>
+                    <a href="blog-posts/workplace-accommodations-ra.html" class="text-blue-600 font-semibold hover:text-blue-700" onclick="trackInternalNav('blog-posts/workplace-accommodations-ra.html')">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Medication Tracking -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-pills text-green-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Medication Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        Comprehensive medication tracking with reminders, side effect monitoring, and 
+                        doctor communication tools. Never miss a dose or important medication update.
+                    </p>
+                    <a href="blog-posts/medication-management-tips.html" class="text-green-600 font-semibold hover:text-green-700" onclick="trackInternalNav('blog-posts/medication-management-tips.html')">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Flare Management -->
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 border border-orange-200">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-fire text-orange-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Flare Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced flare prediction and management tools. Track triggers, symptoms, and 
+                        response to treatments. Get personalized recommendations during flare-ups.
+                    </p>
+                    <a href="blog-posts/ra-flare-management.html" class="text-orange-600 font-semibold hover:text-orange-700" onclick="trackInternalNav('blog-posts/ra-flare-management.html')">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Mental Health Support -->
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-purple-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Mental Health Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Depression and anxiety management tools specifically designed for RA patients. 
+                        Mindfulness exercises, stress reduction techniques, and community support.
+                    </p>
+                    <a href="blog-posts/ra-mental-health-support.html" class="text-purple-600 font-semibold hover:text-purple-700" onclick="trackInternalNav('blog-posts/ra-mental-health-support.html')">
+                        Learn More →
+                    </a>
+                </div>
+
+                <!-- Comorbidity Management -->
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+                    <div class="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-teal-600 text-xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Comorbidity Management</h3>
+                    <p class="text-gray-600 mb-4">
+                        Specialized tracking for diabetes, heart disease, and other conditions that commonly 
+                        occur with RA. Coordinated care recommendations and monitoring tools.
+                    </p>
+                    <a href="blog-posts/comorbidity-management-ra.html" class="text-teal-600 font-semibold hover:text-teal-700" onclick="trackInternalNav('blog-posts/comorbidity-management-ra.html')">
+                        Learn More →
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -623,7 +1087,7 @@
 
             <form id="email-form" class="max-w-md mx-auto space-y-4">
                 <input type="email" id="visitor-email" placeholder="Enter your email address" class="w-full px-6 py-4 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20">
-                <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200">
+                <button type="submit" class="w-full px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200" aria-label="Toggle navigation menu">
                     Start Free Wellness Plan
                 </button>
             </form>
@@ -633,6 +1097,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
@@ -649,14 +1115,17 @@
                         Empowering people with RA to improve their well-being through personalized wellness plans and supportive community.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Follow us on Twitter">
                             <i class="fab fa-twitter text-xl" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Follow us on Instagram">
                             <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Follow us on Facebook">
                             <i class="fab fa-facebook text-xl" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
                         </a>
                     </div>
                 </div>
@@ -672,7 +1141,7 @@
                     <h3 class="text-lg font-semibold mb-4">Stay Updated</h3>
                     <form class="space-y-4">
                         <input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary">
-                        <button type="submit" class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-shadow">
+                        <button type="submit" class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:shadow-lg transition-shadow" aria-label="Toggle navigation menu">
                             Subscribe
                         </button>
                     </form>
@@ -695,7 +1164,99 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
-    <!-- Force deployment with updated email form handling -->
-</body>
+    <script>
+        // Wait for DOM to be loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', function() {
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const button = this;
+                    const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                    
+                    mobileMenu.classList.toggle('hidden');
+                    button.setAttribute('aria-expanded', !isExpanded);
+                });
+            }
+
+            // Email form handling
+            const emailForm = document.getElementById('email-form');
+            if (emailForm) {
+                emailForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('visitor-email').value;
+                    
+                    // Basic validation
+                    if (!email || !email.includes('@')) {
+                        alert('Please enter a valid email address');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.textContent;
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    // Send email to backend
+                    fetch('/api/send-email.js', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ visitorEmail: email })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message) {
+                            alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        } else {
+                            alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        }
+                        document.getElementById('visitor-email').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Error sending email:', error);
+                        alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        document.getElementById('visitor-email').value = '';
+                    })
+                    .finally(() => {
+                        // Reset button
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
+                });
+            }
+        });
+    </script>
+
+    <script>
+        // Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                if (maxScroll >= 25 && maxScroll <= 100) {
+                    gtag('event', 'scroll_depth', {
+                        'scroll_percentage': maxScroll,
+                        'page_title': document.title
+                    });
+                }
+            }
+        });
+        
+        // Track time on page
+        let startTime = Date.now();
+        window.addEventListener('beforeunload', () => {
+            const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+            gtag('event', 'time_on_page', {
+                'time_on_page_seconds': timeOnPage,
+                'page_title': document.title
+            });
+        });
+    </script>
+    
+    </body>
 </html> 
