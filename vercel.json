@@ -62,7 +62,7 @@
     },
     {
       "source": "/blog-posts/category/specialized.html",
-      "destination": "/blog-posts/journaling-ra-mental-health-complete-guide.html",
+      "destination": "/blog-posts/ra-pregnancy-management.html",
       "permanent": true
     },
     {
@@ -103,6 +103,21 @@
     {
       "source": "/blog-posts/category/community.html",
       "destination": "/blog-posts/community-support-chronic-illness-diet-beginners.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/pregnancy.html",
+      "destination": "/blog-posts/ra-pregnancy-management.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/journaling.html",
+      "destination": "/blog-posts/journaling-ra-mental-health-complete-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog-posts/category/wellness.html",
+      "destination": "/blog-posts/holistic-wellness-ra-tips-beginners.html",
       "permanent": true
     }
   ],
