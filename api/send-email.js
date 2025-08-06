@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
             return res.status(400).json({ message: 'Email is required' });
         }
 
-        // Using a simple email service (you can replace with your preferred service)
+        // Using Resend for email notifications
         const emailData = {
             to: 'shorabtuli1975@gmail.com', // Use your verified email address
             subject: 'New Being Well Visitor Signup',
@@ -30,8 +30,7 @@ module.exports = async (req, res) => {
             `
         };
 
-        // Option 1: Using Resend (recommended - free tier available)
-        // You'll need to sign up at resend.com and get an API key
+        // Using Resend (free tier available)
         if (process.env.RESEND_API_KEY) {
             try {
                 const response = await fetch('https://api.resend.com/emails', {
@@ -62,49 +61,12 @@ module.exports = async (req, res) => {
             }
         }
 
-        // Option 2: Using SendGrid (free tier available)
-        if (process.env.SENDGRID_API_KEY) {
-            const sgMail = require('@sendgrid/mail');
-            sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
-            await sgMail.send({
-                to: emailData.to,
-                from: 'noreply@beingwell.health',
-                subject: emailData.subject,
-                html: emailData.html,
-            });
-
-            return res.status(200).json({ message: 'Email sent successfully' });
-        }
-
-        // Option 3: Using Nodemailer with Gmail (requires app password)
-        if (process.env.GMAIL_USER && process.env.GMAIL_PASS) {
-            const nodemailer = require('nodemailer');
-
-            const transporter = nodemailer.createTransporter({
-                service: 'gmail',
-                auth: {
-                    user: process.env.GMAIL_USER,
-                    pass: process.env.GMAIL_PASS,
-                },
-            });
-
-            await transporter.sendMail({
-                from: process.env.GMAIL_USER,
-                to: emailData.to,
-                subject: emailData.subject,
-                html: emailData.html,
-            });
-
-            return res.status(200).json({ message: 'Email sent successfully' });
-        }
-
         // Fallback: Log the email (for development)
         console.log('Email notification:', emailData);
         return res.status(200).json({ message: 'Email logged (no email service configured)' });
 
     } catch (error) {
-        console.error('Error sending email:', error);
-        return res.status(500).json({ message: 'Error sending email' });
+        console.error('API error:', error);
+        return res.status(500).json({ message: 'Internal server error', error: error.message });
     }
-} 
+}; 
