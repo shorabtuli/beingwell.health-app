@@ -29,6 +29,16 @@
       "permanent": true
     },
     {
+      "source": "/arthritis-wellness-app-comparison.html",
+      "destination": "/blog-posts/arthritis-wellness-app-comparison.html",
+      "permanent": true
+    },
+    {
+      "source": "/arthritis-aid.html",
+      "destination": "/blog-posts/arthritis-aid.html",
+      "permanent": true
+    },
+    {
       "source": "/arthritis-app-subscription.html",
       "destination": "/blog-posts/arthritis-app-subscription.html",
       "permanent": true
@@ -39,13 +49,18 @@
       "permanent": true
     },
     {
-      "source": "/active-lifestyle-arthritis.html",
-      "destination": "/blog-posts/active-lifestyle-arthritis.html",
+      "source": "/how-to-reduce-morning-joint-stiffness.html",
+      "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
       "permanent": true
     },
     {
-      "source": "/how-to-reduce-morning-joint-stiffness.html",
-      "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
+      "source": "/healthy-habits-chronic-illness.html",
+      "destination": "/blog-posts/healthy-habits-chronic-illness.html",
+      "permanent": true
+    },
+    {
+      "source": "/active-lifestyle-arthritis.html",
+      "destination": "/blog-posts/active-lifestyle-arthritis.html",
       "permanent": true
     },
     {
