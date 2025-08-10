@@ -64,6 +64,11 @@
       "permanent": true
     },
     {
+      "source": "/([^/]+)-arthritis.html",
+      "destination": "/blog-posts/$1-arthritis.html",
+      "permanent": true
+    },
+    {
       "source": "/blog-posts/category/research.html",
       "destination": "/blog-posts/arthritis-research-latest-findings.html",
       "permanent": true
