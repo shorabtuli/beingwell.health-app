@@ -602,6 +602,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.beingwell.health/blog-posts/arthritis-success-stories.html</loc>
+    <lastmod>2025-07-30T15:22:30+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.beingwell.health/blog-posts/arthritis-support-groups.html</loc>
     <lastmod>2025-07-30T15:22:30+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -975,6 +981,18 @@
   </url>
   <url>
     <loc>https://www.beingwell.health/blog-posts/cold-weather-arthritis.html</loc>
+    <lastmod>2025-07-30T15:22:30+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.beingwell.health/blog-posts/community-support-chronic-illness-diet-beginners.html</loc>
+    <lastmod>2025-07-30T15:22:30+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.beingwell.health/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html</loc>
     <lastmod>2025-07-30T15:22:30+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1485,6 +1503,12 @@
   </url>
   <url>
     <loc>https://www.beingwell.health/blog-posts/holistic-arthritis.html</loc>
+    <lastmod>2025-07-30T15:22:30+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.beingwell.health/blog-posts/holistic-wellness-ra-tips-beginners.html</loc>
     <lastmod>2025-07-30T15:22:30+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -2564,6 +2588,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.beingwell.health/blog-posts/surgery-preparation-recovery-ra-complete-guide.html</loc>
+    <lastmod>2025-07-30T15:22:30+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.beingwell.health/blog-posts/swimming-exercises-for-arthritis.html</loc>
     <lastmod>2025-07-30T15:22:30+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -2842,30 +2872,6 @@
   <url>
     <loc>https://www.beingwell.health/blog-posts/young-adults-arthritis.html</loc>
     <lastmod>2025-07-30T15:22:30+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.beingwell.health/blog-posts/community-support-chronic-illness-diet-beginners.html</loc>
-    <lastmod>2025-08-06T01:22:28.715Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.beingwell.health/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html</loc>
-    <lastmod>2025-08-06T01:22:28.717Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.beingwell.health/blog-posts/holistic-wellness-ra-tips-beginners.html</loc>
-    <lastmod>2025-08-06T01:22:28.717Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.beingwell.health/blog-posts/surgery-preparation-recovery-ra-complete-guide.html</loc>
-    <lastmod>2025-08-06T01:22:28.717Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
