@@ -124,11 +124,6 @@
       "permanent": true
     },
     {
-      "source": "/blog-posts/category/meditation.html",
-      "destination": "/blog-posts/meditation-for-ra-pain-complete-guide.html",
-      "permanent": true
-    },
-    {
       "source": "/blog-posts/category/comorbidity.html",
       "destination": "/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html",
       "permanent": true
@@ -181,10 +176,6 @@
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
     },
     {
       "source": "/blog",
