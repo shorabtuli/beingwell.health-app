@@ -25,13 +25,20 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://beingwell.com/blog/wellness-pillars-overview">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
@@ -42,108 +49,155 @@
             padding: 20px;
         }
         
+        /* Navigation */
+        .nav-header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-header a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-header a:hover {
+            color: #fbbf24;
+        }
+        
+        /* Header */
         .header {
             text-align: center;
             color: white;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+            padding: 40px 20px;
         }
         
         .header h1 {
-            font-size: 3em;
-            font-weight: bold;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
         .header p {
-            font-size: 1.2em;
+            font-size: 1.3rem;
             opacity: 0.9;
-            margin-bottom: 0;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
+        /* Intro Section */
         .intro-section {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            border-left: 5px solid #4a90e2;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-left: 6px solid #4a90e2;
         }
         
         .intro-section h2 {
             color: #2c5aa0;
-            font-size: 2em;
-            margin-bottom: 20px;
-            margin-top: 0;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
         }
         
         .intro-section p {
-            font-size: 1.1em;
+            font-size: 1.1rem;
             color: #555;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            line-height: 1.7;
         }
         
+        /* Section Headers */
         .section-header {
             background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
             color: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 15px;
             text-align: center;
-            margin: 40px 0 30px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin: 50px 0 40px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
         
         .section-header h2 {
             margin: 0;
-            font-size: 1.8em;
-            font-weight: bold;
+            font-size: 2rem;
+            font-weight: 700;
         }
         
+        /* Pillar Grid */
         .pillar-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
         }
         
         .pillar-card {
             background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
             border: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
         }
         
         .pillar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--pillar-color), var(--pillar-color-light));
         }
         
         .pillar-header {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .pillar-icon {
-            font-size: 2.5em;
-            margin-right: 15px;
-            width: 60px;
+            font-size: 3rem;
+            margin-right: 20px;
+            width: 80px;
             text-align: center;
         }
         
         .pillar-title {
-            font-size: 1.3em;
-            font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: 700;
             color: #2c5aa0;
             margin: 0;
         }
         
         .pillar-description {
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-style: italic;
+            font-size: 1rem;
         }
         
         .pillar-strategies {
@@ -154,85 +208,100 @@
         
         .pillar-strategies li {
             background: #f8f9fa;
-            margin-bottom: 8px;
-            padding: 8px 12px;
-            border-radius: 8px;
-            border-left: 3px solid #4a90e2;
-            font-size: 0.9em;
+            margin-bottom: 12px;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
         
-        .priority-high {
-            border-top: 4px solid #ff6b6b;
+        .pillar-strategies li:hover {
+            background: #e8f4fd;
+            transform: translateX(5px);
         }
         
-        .priority-medium {
-            border-top: 4px solid #4ecdc4;
+        /* Priority Colors */
+        .priority-high::before {
+            --pillar-color: #ff6b6b;
+            --pillar-color-light: #ee5a24;
         }
         
-        .priority-low {
-            border-top: 4px solid #a8edea;
+        .priority-medium::before {
+            --pillar-color: #4ecdc4;
+            --pillar-color-light: #44a08d;
         }
         
+        .priority-low::before {
+            --pillar-color: #a8edea;
+            --pillar-color-light: #fed6e3;
+        }
+        
+        /* Habit Building Section */
         .habit-building-section {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 40px 0;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .habit-building-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .habit-building-header h2 {
             color: #2c5aa0;
-            font-size: 2.2em;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
         }
         
         .habit-building-header p {
             color: #666;
-            font-size: 1.1em;
+            font-size: 1.2rem;
         }
         
         .habit-features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
         
         .habit-feature-card {
             background: #f8f9fa;
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
         }
         
         .habit-feature-card:hover {
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
         
         .habit-feature-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
         }
         
         .habit-feature-title {
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 700;
             color: #2c5aa0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .habit-feature-description {
             color: #666;
-            margin-bottom: 15px;
-            font-size: 0.95em;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         .habit-feature-list {
@@ -242,55 +311,63 @@
         }
         
         .habit-feature-list li {
-            margin-bottom: 6px;
-            padding-left: 20px;
+            margin-bottom: 8px;
+            padding-left: 25px;
             position: relative;
-            font-size: 0.9em;
+            font-size: 0.95rem;
             color: #555;
+            line-height: 1.5;
         }
         
         .habit-feature-list li:before {
             content: "•";
             color: #8b5cf6;
             font-weight: bold;
+            font-size: 1.2rem;
             position: absolute;
             left: 0;
+            top: -2px;
         }
         
+        /* Conclusion */
         .conclusion {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px;
-            border-radius: 15px;
+            padding: 50px;
+            border-radius: 20px;
             text-align: center;
-            margin-top: 40px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
         
         .conclusion h2 {
             color: white;
-            margin-bottom: 20px;
-            font-size: 2em;
+            margin-bottom: 25px;
+            font-size: 2.5rem;
+            font-weight: 700;
         }
         
         .conclusion p {
-            font-size: 1.1em;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
             opacity: 0.95;
+            line-height: 1.7;
         }
         
+        /* Resources */
         .resources {
             background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-top: 40px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .resources h3 {
             color: #2c5aa0;
-            margin-bottom: 20px;
-            font-size: 1.5em;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
         
         .resources ul {
@@ -299,38 +376,148 @@
         }
         
         .resources li {
-            margin-bottom: 10px;
-            padding: 10px 15px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
             background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 3px solid #4a90e2;
+            border-radius: 10px;
+            border-left: 4px solid #4a90e2;
+            transition: all 0.3s ease;
+        }
+        
+        .resources li:hover {
+            background: #e8f4fd;
+            transform: translateX(5px);
         }
         
         .resources a {
             color: #4a90e2;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .resources a:hover {
             text-decoration: underline;
         }
         
+        /* Email Signup */
+        .email-signup-section {
+            margin: 50px 0;
+        }
+        
+        .email-signup-section .bg-gradient-to-br {
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .email-signup-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .email-signup-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .email-signup-section form {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        
+        .email-signup-section input {
+            font-size: 1rem;
+            padding: 15px 20px;
+        }
+        
+        .email-signup-section button {
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            font-weight: 600;
+        }
+        
+        /* Related Articles */
+        .related-articles {
+            margin: 50px 0;
+        }
+        
+        .related-articles h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+        
+        .related-articles .grid {
+            gap: 25px;
+        }
+        
+        .related-articles a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .related-articles a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .related-articles h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c5aa0;
+        }
+        
+        .related-articles p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
             
             .header h1 {
-                font-size: 2.2em;
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+            
+            .intro-section h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
             }
             
             .pillar-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .habit-features-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .conclusion h2 {
+                font-size: 2rem;
+            }
+            
+            .email-signup-section h2 {
+                font-size: 2rem;
+            }
+            
+            .nav-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
             }
         }
     </style>
@@ -338,16 +525,14 @@
 <body>
     <div class="container">
         <!-- Navigation Header -->
-        <nav class="mb-8">
-            <div class="flex items-center justify-between">
-                <a href="../index.html" class="flex items-center space-x-2 text-white hover:text-yellow-300 transition-colors">
-                    <i class="fas fa-arrow-left text-lg"></i>
-                    <span class="font-semibold">Back to Being Well</span>
-                </a>
-                <a href="../blog.html" class="text-white hover:text-yellow-300 transition-colors font-semibold">
-                    Browse All Articles
-                </a>
-            </div>
+        <nav class="nav-header">
+            <a href="../index.html">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Being Well</span>
+            </a>
+            <a href="../blog.html">
+                Browse All Articles
+            </a>
         </nav>
 
         <div class="header">
@@ -714,4 +899,3 @@
     </script>
 </body>
 </html>
-
