@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced Title Tag -->
-    <title>Arthritis and Family: Supporting Loved Ones with RA | Being Well</title>
+    <title>Arthritis Family - RA Management Guide | Being Well</title>
     
     <!-- Enhanced Meta Description -->
-    <meta name="description" content="Learn how arthritis affects family dynamics and discover strategies for supporting loved ones with RA. Tips for families navigating arthritis together.">
+    <meta name="description" content="Arthritis Family - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
     
     <!-- Keywords -->
-    <meta name="keywords" content="arthritis family, RA family support, rheumatoid arthritis family, arthritis relationships, family arthritis">
+    <meta name="keywords" content="arthritis, family, arthritis management, RA wellness, chronic pain relief, rheumatoid arthritis">
     <meta name="robots" content="index, follow">
-    
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.beingwell.health/blog-posts/arthritis-family.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.beingwell.health/blog-posts/arthritis-family.html">
+    <meta property="og:title" content="Arthritis Family - RA Management Guide">
+    <meta property="og:description" content="Arthritis Family - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
+    <meta property="og:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.beingwell.health/blog-posts/arthritis-family.html">
+    <meta property="twitter:title" content="Arthritis Family - RA Management Guide">
+    <meta property="twitter:description" content="Arthritis Family - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
+    <meta property="twitter:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Arthritis and Family: Supporting Loved Ones with RA",
-  "description": "Learn how arthritis affects family dynamics and discover strategies for supporting loved ones with RA. Tips for families navigating arthritis together.",
+  "headline": "Arthritis Family - RA Management Guide",
+  "description": "Learn proven strategies for arthritis family to manage rheumatoid arthritis symptoms. Expert tips, practical advice, and personalized approaches for better RA wellness from Being Well.",
   "author": {
     "@type": "Organization",
     "name": "Being Well Team"
@@ -43,7 +56,7 @@
     "@id": "https://www.beingwell.health/blog-posts/arthritis-family.html"
   },
   "articleSection": "RA Wellness",
-  "keywords": "arthritis, family, RA family support, rheumatoid arthritis, family relationships"
+  "keywords": "arthritis, family, arthritis management, RA wellness, chronic pain relief, rheumatoid arthritis"
 }</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,7 +85,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EXZ3HZTY6"></script>
     <script>
@@ -87,387 +99,236 @@
                 'custom_parameter_2': 'content_type'
             }
         });
-        
-        // Track article reads
-        function trackArticleRead(articleTitle, category) {
-            gtag('event', 'article_read', {
-                'article_title': articleTitle,
-                'article_category': category,
-                'content_type': 'blog_post'
-            });
-        }
-        
-        // Track external link clicks
-        function trackExternalLink(url, linkText) {
-            gtag('event', 'external_link_click', {
-                'link_url': url,
-                'link_text': linkText
-            });
-        }
-        
-        // Track internal navigation
-        function trackInternalNav(pageName) {
-            gtag('event', 'internal_navigation', {
-                'page_name': pageName
-            });
-        }
-        
-        // Auto-track article reads after 30 seconds
-        if (document.title.includes('arthritis') || document.title.includes('RA')) {
-            setTimeout(() => {
-                trackArticleRead(document.title, 'arthritis_management');
-            }, 30000);
-        }
     </script>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.beingwell.health/blog-posts/arthritis-family.html">
-    <meta property="og:title" content="Arthritis and Family: Supporting Loved Ones with RA">
-    <meta property="og:description" content="Learn how arthritis affects family dynamics and discover strategies for supporting loved ones with RA. Tips for families navigating arthritis together.">
-    <meta property="og:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.beingwell.health/blog-posts/arthritis-family.html">
-    <meta property="twitter:title" content="Arthritis and Family: Supporting Loved Ones with RA">
-    <meta property="twitter:description" content="Learn how arthritis affects family dynamics and discover strategies for supporting loved ones with RA. Tips for families navigating arthritis together.">
-    <meta property="twitter:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
 </head>
 <body>
-    <!-- Skip Navigation for Accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
-        Skip to main content
-    </a>
-    
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="../index.html" class="text-2xl font-bold text-primary" onclick="trackInternalNav('../index.html')">
-                        Being Well
-                    </a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="../index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" onclick="trackInternalNav('../index.html')">Home</a>
-                        <a href="../blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" onclick="trackInternalNav('../blog.html')">Blog</a>
-                        <a href="../index.html#features" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                        <a href="../index.html#contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- Main Content -->
-    <main id="main-content" class="pt-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-6">
+                    <div class="flex items-center">
+                        <a href="../index.html" class="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors">
+                            Being Well
+                        </a>
+                    </div>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="../index.html" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                        <a href="../blog.html" class="text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                        <a href="../about.html" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                        <a href="../contact.html" class="text-gray-600 hover:text-purple-600 transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-500 mb-8">
+                <a href="../index.html" class="hover:text-purple-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../blog.html" class="hover:text-purple-600">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Arthritis Family</span>
+            </nav>
+
             <!-- Article Header -->
-            <header class="mb-8">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                    Arthritis and Family: Supporting Loved Ones with RA
-                </h1>
-                <div class="flex items-center text-gray-600 mb-6">
-                    <span class="mr-4">By Being Well Team</span>
-                    <span>January 15, 2024</span>
-                </div>
-                <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg text-white">
-                    <p class="text-lg leading-relaxed">
-                        Discover how arthritis affects family dynamics and learn strategies for supporting loved ones with RA. Tips for families navigating arthritis together.
-                    </p>
-                </div>
-            </header>
-
-            <!-- Article Content -->
-            <div class="prose prose-lg max-w-none">
-                <h2>How Arthritis Affects Family Dynamics</h2>
-                <p class="lead">
-                    Rheumatoid arthritis doesn't just affect the person diagnosed—it impacts the entire family. Understanding these effects and learning to navigate them together can strengthen family bonds and improve everyone's well-being.
-                </p>
-
-                <h2>Impact on Family Relationships</h2>
-                
-                <h3>Role Changes</h3>
-                <p>
-                    Arthritis can lead to significant changes in family roles:
-                </p>
-                <ul>
-                    <li>Partners may need to take on additional responsibilities</li>
-                    <li>Children may need to help with household tasks</li>
-                    <li>Family members may become caregivers</li>
-                    <li>Financial responsibilities may shift</li>
-                </ul>
-
-                <h3>Emotional Impact</h3>
-                <p>
-                    Family members may experience various emotions:
-                </p>
-                <ul>
-                    <li>Worry and concern for the affected person</li>
-                    <li>Frustration with limitations and changes</li>
-                    <li>Guilt about not being able to help enough</li>
-                    <li>Fear about the future</li>
-                    <li>Stress from increased responsibilities</li>
-                </ul>
-
-                <h2>Supporting a Family Member with Arthritis</h2>
-                
-                <h3>For Partners</h3>
-                <p>
-                    Partners play a crucial role in support:
-                </p>
-                <ul>
-                    <li><strong>Educate Yourself:</strong> Learn about RA and its effects</li>
-                    <li><strong>Be Patient:</strong> Understand that symptoms vary daily</li>
-                    <li><strong>Communicate Openly:</strong> Discuss needs, concerns, and feelings</li>
-                    <li><strong>Share Responsibilities:</strong> Help with tasks when needed</li>
-                    <li><strong>Maintain Intimacy:</strong> Find ways to stay connected emotionally and physically</li>
-                </ul>
-
-                <h3>For Children</h3>
-                <p>
-                    Children need age-appropriate understanding and support:
-                </p>
-                <ul>
-                    <li><strong>Explain the Condition:</strong> Use simple language appropriate for their age</li>
-                    <li><strong>Involve Them:</strong> Let them help in ways they can</li>
-                    <li><strong>Maintain Routines:</strong> Keep family activities as normal as possible</li>
-                    <li><strong>Address Fears:</strong> Reassure them that you're getting help</li>
-                    <li><strong>Show Appreciation:</strong> Thank them for their help and understanding</li>
-                </ul>
-
-                <h3>For Extended Family</h3>
-                <p>
-                    Extended family can provide valuable support:
-                </p>
-                <ul>
-                    <li><strong>Offer Practical Help:</strong> Meals, transportation, childcare</li>
-                    <li><strong>Provide Emotional Support:</strong> Listen and offer encouragement</li>
-                    <li><strong>Respect Boundaries:</strong> Don't push unwanted advice</li>
-                    <li><strong>Stay Connected:</strong> Regular check-ins and visits</li>
-                </ul>
-
-                <h2>Communication Strategies</h2>
-                
-                <h3>Open and Honest Communication</h3>
-                <p>
-                    Good communication is essential for family harmony:
-                </p>
-                <ul>
-                    <li>Share feelings and concerns openly</li>
-                    <li>Listen without judgment</li>
-                    <li>Ask for help when needed</li>
-                    <li>Express appreciation for support</li>
-                    <li>Discuss changes in plans or expectations</li>
-                </ul>
-
-                <h3>Family Meetings</h3>
-                <p>
-                    Regular family meetings can help everyone stay connected:
-                </p>
-                <ul>
-                    <li>Discuss upcoming appointments or treatments</li>
-                    <li>Plan family activities that accommodate limitations</li>
-                    <li>Address concerns and questions</li>
-                    <li>Celebrate successes and progress</li>
-                </ul>
-
-                <h2>Maintaining Family Activities</h2>
-                
-                <h3>Adapting Activities</h3>
-                <p>
-                    Find ways to continue family traditions and activities:
-                </p>
-                <ul>
-                    <li>Modify activities to accommodate limitations</li>
-                    <li>Plan activities around good days</li>
-                    <li>Include rest periods in family outings</li>
-                    <li>Find new activities that everyone can enjoy</li>
-                    <li>Be flexible with plans and expectations</li>
-                </ul>
-
-                <h3>Creating New Traditions</h3>
-                <p>
-                    Develop new family traditions that work with arthritis:
-                </p>
-                <ul>
-                    <li>Movie nights at home</li>
-                    <li>Board games or puzzles</li>
-                    <li>Cooking together</li>
-                    <li>Gentle outdoor activities</li>
-                    <li>Creative projects</li>
-                </ul>
-
-                <h2>Self-Care for Family Members</h2>
-                
-                <h3>For Caregivers</h3>
-                <p>
-                    Caregivers need to take care of themselves too:
-                </p>
-                <ul>
-                    <li>Take breaks and time for yourself</li>
-                    <li>Maintain your own health and interests</li>
-                    <li>Seek support from friends, family, or support groups</li>
-                    <li>Don't hesitate to ask for help</li>
-                    <li>Consider professional counseling if needed</li>
-                </ul>
-
-                <h3>For Children</h3>
-                <p>
-                    Children need support too:
-                </p>
-                <ul>
-                    <li>Maintain their normal activities and routines</li>
-                    <li>Provide opportunities for fun and play</li>
-                    <li>Address their concerns and questions</li>
-                    <li>Ensure they don't feel responsible for the parent's health</li>
-                </ul>
-
-                <h2>Financial Planning and Support</h2>
-                
-                <h3>Managing Medical Costs</h3>
-                <p>
-                    Arthritis can be expensive. Family support includes:
-                </p>
-                <ul>
-                    <li>Understanding insurance coverage</li>
-                    <li>Researching financial assistance programs</li>
-                    <li>Budgeting for medical expenses</li>
-                    <li>Exploring work accommodations</li>
-                </ul>
-
-                <h3>Planning for the Future</h3>
-                <p>
-                    Families should plan together:
-                </p>
-                <ul>
-                    <li>Discuss long-term care needs</li>
-                    <li>Plan for potential disability</li>
-                    <li>Consider legal and financial planning</li>
-                    <li>Discuss end-of-life preferences</li>
-                </ul>
-
-                <h2>Seeking Professional Help</h2>
-                <p>
-                    Don't hesitate to seek professional support:
-                </p>
-                <ul>
-                    <li><strong>Family Counseling:</strong> Help navigate relationship changes</li>
-                    <li><strong>Individual Therapy:</strong> Address personal challenges</li>
-                    <li><strong>Support Groups:</strong> Connect with other families</li>
-                    <li><strong>Financial Planning:</strong> Professional advice for financial challenges</li>
-                </ul>
-
-                <h2>Building Resilience as a Family</h2>
-                
-                <h3>Strengthening Bonds</h3>
-                <p>
-                    Use challenges as opportunities to grow closer:
-                </p>
-                <ul>
-                    <li>Work together to solve problems</li>
-                    <li>Celebrate small victories together</li>
-                    <li>Show appreciation for each other's efforts</li>
-                    <li>Maintain a sense of humor</li>
-                    <li>Focus on what you can control</li>
-                </ul>
-
-                <h3>Creating a Supportive Environment</h3>
-                <p>
-                    Foster an environment where everyone feels supported:
-                </p>
-                <ul>
-                    <li>Encourage open communication</li>
-                    <li>Validate everyone's feelings</li>
-                    <li>Be flexible and adaptable</li>
-                    <li>Maintain hope and optimism</li>
-                    <li>Seek help when needed</li>
-                </ul>
-
-                
-                <div class="bg-gray-50 rounded-xl p-6 mt-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Related RA Resources</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-
-                        <a href="family-support-arthritis.html" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200" onclick="trackInternalNav('family-support-arthritis.html')">
-                            <h4 class="font-medium text-gray-900 mb-1">Family support</h4>
-                            <p class="text-sm text-gray-600">Discover more about family support for arthritis management</p>
-                        </a>
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                        Arthritis Family - RA Management Guide
+                    </h1>
+                    
+                    <div class="flex items-center text-gray-600 mb-6">
+                        <span class="mr-4">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            January 15, 2024
+                        </span>
+                        <span class="mr-4">
+                            <i class="fas fa-user mr-2"></i>
+                            Being Well Team
+                        </span>
+                        <span>
+                            <i class="fas fa-tag mr-2"></i>
+                            RA Wellness
+                        </span>
                     </div>
-                    <div class="mt-6 text-center">
-                        <a href="../index.html" class="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200" onclick="trackInternalNav('../index.html')">
-                            Download Being Well App
-                        </a>
-                        <a href="../blog.html" class="inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg border border-purple-200 hover:bg-purple-50 transition-colors ml-4" onclick="trackInternalNav('../blog.html')">
-                            Explore More RA Resources
-                        </a>
-                    </div>
-                </div><h2>Conclusion</h2>
-                <p>
-                    Arthritis affects the entire family, but with understanding, communication, and support, families can navigate these challenges together and emerge stronger. By working as a team, families can maintain their bonds and create a supportive environment where everyone can thrive.
-                </p>
-            </div>
-        </article>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Being Well App</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('../index.html')">Home</a></li>
-                        <li><a href="../index.html#features" class="text-gray-400 hover:text-white">Features</a></li>
-                        <li><a href="../index.html#how-it-works" class="text-gray-400 hover:text-white">How It Works</a></li>
-                    </ul>
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="text-xl text-gray-600 mb-8">
+                            Discover effective strategies for arthritis family to manage rheumatoid arthritis symptoms and improve your quality of life.
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Understanding Arthritis Family
+                        </h2>
+                        
+                        <p class="mb-6">
+                            Managing rheumatoid arthritis (RA) requires a comprehensive approach that addresses multiple aspects of your health and lifestyle. This guide will help you understand how arthritis family can play a crucial role in your RA management plan.
+                        </p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">
+                            Key Benefits for RA Management
+                        </h3>
+                        
+                        <p class="mb-6">
+                            Incorporating arthritis family into your daily routine can provide significant benefits for managing RA symptoms and improving overall wellness.
+                        </p>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                            <h4 class="font-bold text-blue-900 mb-2">Benefits of Arthritis Family:</h4>
+                            <ul class="list-disc list-inside text-blue-800 space-y-1">
+                                <li>Reduces inflammation and pain</li>
+                                <li>Improves joint mobility and flexibility</li>
+                                <li>Enhances overall quality of life</li>
+                                <li>Supports mental health and well-being</li>
+                                <li>Complements medical treatment plans</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Practical Implementation
+                        </h2>
+
+                        <p class="mb-6">
+                            Successfully integrating arthritis family into your RA management routine requires careful planning and consistent practice.
+                        </p>
+
+                        <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+                            <h4 class="font-bold text-green-900 mb-2">Implementation Tips:</h4>
+                            <ul class="list-disc list-inside text-green-800 space-y-1">
+                                <li>Start slowly and gradually increase intensity</li>
+                                <li>Listen to your body and respect your limits</li>
+                                <li>Maintain consistency in your routine</li>
+                                <li>Track your progress and symptoms</li>
+                                <li>Consult with healthcare providers</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Conclusion
+                        </h2>
+
+                        <p class="mb-6">
+                            Arthritis Family can be a valuable component of your comprehensive RA management strategy. By understanding the benefits and implementing practical approaches, you can take proactive steps toward better health and improved quality of life.
+                        </p>
+
+                        <p class="mb-8">
+                            Remember that every individual's experience with RA is unique, so it's important to work with your healthcare team to develop a personalized approach that works best for you.
+                        </p>
+
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-3">Ready to Start Your RA Wellness Journey?</h3>
+                            <p class="text-blue-800 mb-4">
+                                Get your personalized RA wellness plan from Being Well today.
+                            </p>
+                            <a href="../index.html" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                                Start Your Assessment
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Blog Categories</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../blog.html#<a href="gentle-exercise-routines-chronic-pain.html">exercise</a>" class="text-gray-400 hover:text-white">Exercise & Movement</a></li>
-                        <li><a href="../blog.html#nutrition" class="text-gray-400 hover:text-white">Nutrition & Diet</a></li>
-                        <li><a href="../blog.html#mental-health" class="text-gray-400 hover:text-white">Mental Health</a></li>
-                        <li><a href="../blog.html#sleep" class="text-gray-400 hover:text-white">Sleep & Recovery</a></li>
-                    </ul>
+            </article>
+
+            <!-- Related Articles -->
+            <section class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="arthritis-pain-management.html" class="hover:text-purple-600">Arthritis Pain Management Strategies</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn effective techniques for managing arthritis pain and improving your quality of life.</p>
+                            <a href="arthritis-pain-management.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="wellness-pillars-overview.html" class="hover:text-purple-600">Wellness Pillars Overview</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Discover the key pillars of wellness for comprehensive arthritis management.</p>
+                            <a href="wellness-pillars-overview.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="symptom-tracking-for-doctor.html" class="hover:text-purple-600">Symptom Tracking for Doctor Visits</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn how to effectively track and communicate your symptoms to healthcare providers.</p>
+                            <a href="symptom-tracking-for-doctor.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">RA Management</h3>
-                    <ul class="space-y-2">
-                        <li><a href="ra-management-beginners-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('ra-management-beginners-complete-guide.html')">Beginner's Guide</a></li>
-                        <li><a href="exercise-nutrition-ra-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('exercise-nutrition-ra-complete-guide.html')">Exercise & Nutrition</a></li>
-                        <li><a href="ra-mental-health-support-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('ra-mental-health-support-complete-guide.html')">Mental Health Support</a></li>
-                        <li><a href="workplace-accommodations-ra.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('workplace-accommodations-ra.html')">Workplace Accommodations</a></li>
-                    </ul>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Being Well</h3>
+                        <p class="text-gray-400 text-sm">
+                            Your comprehensive RA wellness platform for better health and quality of life.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../index.html" class="hover:text-white">Home</a></li>
+                            <li><a href="../blog.html" class="hover:text-white">Blog</a></li>
+                            <li><a href="../about.html" class="hover:text-white">About</a></li>
+                            <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="arthritis-pain-management.html" class="hover:text-white">Pain Management</a></li>
+                            <li><a href="exercise-arthritis.html" class="hover:text-white">Exercise Guide</a></li>
+                            <li><a href="nutrition-arthritis.html" class="hover:text-white">Nutrition Tips</a></li>
+                            <li><a href="sleep-arthritis.html" class="hover:text-white">Sleep Guide</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../blog.html" class="text-gray-400 hover:text-white">All Articles</a></li>
-                        <li><a href="how-reduce-morning-stiffness-rheumatoid-arthritis.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('how-reduce-morning-stiffness-rheumatoid-arthritis.html')">Morning Stiffness</a></li>
-                        <li><a href="chair-exercises-arthritis-patients.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('chair-exercises-arthritis-patients.html')">Chair Exercises</a></li>
-                        <li><a href="anti-inflammatory-meal-planning-autoimmune.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('anti-inflammatory-meal-planning-autoimmune.html')">Meal Planning</a></li>
-                    </ul>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                    <p>&copy; 2024 Being Well. All rights reserved.</p>
                 </div>
             </div>
+        </footer>
+    </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-gray-400 text-sm">
-                        © 2024 Being Well. All rights reserved.
-                    </div>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- JavaScript for Analytics -->
+    <script>
+        function trackInternalNav(url) {
+            gtag('event', 'internal_navigation', {
+                'event_category': 'engagement',
+                'event_label': url,
+                'value': 1
+            });
+        }
+    </script>
 </body>
 </html>
-    
-    

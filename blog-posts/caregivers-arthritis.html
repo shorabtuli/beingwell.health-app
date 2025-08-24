@@ -5,25 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced Title Tag -->
-    <title>Caregivers and Arthritis: Supporting Loved Ones with RA | Being Well</title>
+    <title>Caregivers Arthritis - RA Management Guide | Being Well</title>
     
     <!-- Enhanced Meta Description -->
-    <meta name="description" content="Essential guide for caregivers supporting loved ones with arthritis. Learn practical tips, emotional support strategies, and self-care for arthritis caregivers.">
+    <meta name="description" content="Caregivers Arthritis - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
     
     <!-- Keywords -->
-    <meta name="keywords" content="caregivers arthritis, arthritis support, RA caregivers, rheumatoid arthritis support, caregiver tips">
+    <meta name="keywords" content="caregivers, arthritis, arthritis management, RA wellness, chronic pain relief, rheumatoid arthritis">
     <meta name="robots" content="index, follow">
-    
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.beingwell.health/blog-posts/caregivers-arthritis.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.beingwell.health/blog-posts/caregivers-arthritis.html">
+    <meta property="og:title" content="Caregivers Arthritis - RA Management Guide">
+    <meta property="og:description" content="Caregivers Arthritis - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
+    <meta property="og:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.beingwell.health/blog-posts/caregivers-arthritis.html">
+    <meta property="twitter:title" content="Caregivers Arthritis - RA Management Guide">
+    <meta property="twitter:description" content="Caregivers Arthritis - RA Management Guide - Expert tips and strategies for managing arthritis symptoms. Learn proven techniques for pain relief and improved quality of life.">
+    <meta property="twitter:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
     
     <!-- Schema Markup -->
     <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Caregivers and Arthritis: Supporting Loved Ones with RA",
-  "description": "Essential guide for caregivers supporting loved ones with arthritis. Learn practical tips, emotional support strategies, and self-care for arthritis caregivers.",
+  "headline": "Caregivers Arthritis - RA Management Guide",
+  "description": "Learn proven strategies for caregivers arthritis to manage rheumatoid arthritis symptoms. Expert tips, practical advice, and personalized approaches for better RA wellness from Being Well.",
   "author": {
     "@type": "Organization",
     "name": "Being Well Team"
@@ -43,7 +56,7 @@
     "@id": "https://www.beingwell.health/blog-posts/caregivers-arthritis.html"
   },
   "articleSection": "RA Wellness",
-  "keywords": "caregivers, arthritis, support, RA, rheumatoid arthritis, caregiver tips, emotional support"
+  "keywords": "caregivers, arthritis, arthritis management, RA wellness, chronic pain relief, rheumatoid arthritis"
 }</script>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,7 +85,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EXZ3HZTY6"></script>
     <script>
@@ -87,288 +99,236 @@
                 'custom_parameter_2': 'content_type'
             }
         });
-        
-        // Track article reads
-        function trackArticleRead(articleTitle, category) {
-            gtag('event', 'article_read', {
-                'article_title': articleTitle,
-                'article_category': category,
-                'content_type': 'blog_post'
-            });
-        }
-        
-        // Track external link clicks
-        function trackExternalLink(url, linkText) {
-            gtag('event', 'external_link_click', {
-                'link_url': url,
-                'link_text': linkText
-            });
-        }
-        
-        // Track internal navigation
-        function trackInternalNav(pageName) {
-            gtag('event', 'internal_navigation', {
-                'page_name': pageName
-            });
-        }
-        
-        // Auto-track article reads after 30 seconds
-        if (document.title.includes('arthritis') || document.title.includes('RA')) {
-            setTimeout(() => {
-                trackArticleRead(document.title, 'arthritis_management');
-            }, 30000);
-        }
     </script>
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.beingwell.health/blog-posts/caregivers-arthritis.html">
-    <meta property="og:title" content="Caregivers and Arthritis: Supporting Loved Ones with RA">
-    <meta property="og:description" content="Essential guide for caregivers supporting loved ones with arthritis. Learn practical tips, emotional support strategies, and self-care for arthritis caregivers.">
-    <meta property="og:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.beingwell.health/blog-posts/caregivers-arthritis.html">
-    <meta property="twitter:title" content="Caregivers and Arthritis: Supporting Loved Ones with RA">
-    <meta property="twitter:description" content="Essential guide for caregivers supporting loved ones with arthritis. Learn practical tips, emotional support strategies, and self-care for arthritis caregivers.">
-    <meta property="twitter:image" content="https://www.beingwell.health/images/arthritis-wellness-blog.jpg">
 </head>
 <body>
-    <!-- Skip Navigation for Accessibility -->
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white px-4 py-2 rounded z-50">
-        Skip to main content
-    </a>
-    
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="../index.html" class="text-2xl font-bold text-primary" onclick="trackInternalNav('../index.html')">
-                        Being Well
-                    </a>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="../index.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" onclick="trackInternalNav('../index.html')">Home</a>
-                        <a href="../blog.html" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" onclick="trackInternalNav('../blog.html')">Blog</a>
-                        <a href="../index.html#features" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Features</a>
-                        <a href="../index.html#contact" class="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
     <!-- Main Content -->
-    <main id="main-content" class="pt-16">
-        <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Header -->
+        <header class="bg-white shadow-sm border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-6">
+                    <div class="flex items-center">
+                        <a href="../index.html" class="text-2xl font-bold text-gray-900 hover:text-purple-600 transition-colors">
+                            Being Well
+                        </a>
+                    </div>
+                    <nav class="hidden md:flex space-x-8">
+                        <a href="../index.html" class="text-gray-600 hover:text-purple-600 transition-colors">Home</a>
+                        <a href="../blog.html" class="text-gray-600 hover:text-purple-600 transition-colors">Blog</a>
+                        <a href="../about.html" class="text-gray-600 hover:text-purple-600 transition-colors">About</a>
+                        <a href="../contact.html" class="text-gray-600 hover:text-purple-600 transition-colors">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <!-- Breadcrumb -->
+            <nav class="text-sm text-gray-500 mb-8">
+                <a href="../index.html" class="hover:text-purple-600">Home</a>
+                <span class="mx-2">/</span>
+                <a href="../blog.html" class="hover:text-purple-600">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900">Caregivers Arthritis</span>
+            </nav>
+
             <!-- Article Header -->
-            <header class="mb-8">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">
-                    Caregivers and Arthritis: Supporting Loved Ones with RA
-                </h1>
-                <div class="flex items-center text-gray-600 mb-6">
-                    <span class="mr-4">By Being Well Team</span>
-                    <span>January 15, 2024</span>
-                </div>
-                <div class="bg-gradient-to-r from-primary to-secondary p-6 rounded-lg text-white">
-                    <p class="text-lg leading-relaxed">
-                        Essential guide for caregivers supporting loved ones with arthritis. Learn practical tips, emotional support strategies, and self-care for arthritis caregivers.
-                    </p>
-                </div>
-            </header>
-
-            <!-- Article Content -->
-            <div class="prose prose-lg max-w-none">
-                <h2>The Role of Caregivers in Arthritis Management</h2>
-                <p class="lead">
-                    Caregivers play a crucial role in supporting loved ones with rheumatoid arthritis. From practical assistance to emotional support, caregivers help maintain quality of life and independence for arthritis patients.
-                </p>
-
-                <h2>Understanding Arthritis from a Caregiver's Perspective</h2>
-                
-                <h3>Physical Challenges</h3>
-                <p>
-                    Arthritis can cause <a href="arthritis-pain-management.html">pain</a>, stiffness, and limited mobility, making everyday tasks difficult. Understanding these physical limitations helps caregivers provide appropriate support without undermining independence.
-                </p>
-
-                <h3>Emotional Impact</h3>
-                <p>
-                    Living with chronic pain and physical limitations can lead to frustration, depression, and anxiety. Caregivers need to recognize and address these emotional challenges alongside physical needs.
-                </p>
-
-                <h2>Practical Support Strategies</h2>
-                
-                <h3>Daily Living Assistance</h3>
-                <ul>
-                    <li><strong>Mobility Support:</strong> Help with walking, transfers, and positioning</li>
-                    <li><strong>Personal Care:</strong> Assistance with dressing, grooming, and hygiene</li>
-                    <li><strong>Household Tasks:</strong> Help with cooking, cleaning, and shopping</li>
-                    <li><strong>Transportation:</strong> Driving to appointments and activities</li>
-                </ul>
-
-                <h3>Medical Support</h3>
-                <ul>
-                    <li><strong>Medication Management:</strong> Reminders and assistance with medication schedules</li>
-                    <li><strong>Appointment Coordination:</strong> Scheduling and attending medical appointments</li>
-                    <li><strong>Treatment Monitoring:</strong> Tracking symptoms and treatment effectiveness</li>
-                    <li><strong>Communication:</strong> Advocating with healthcare providers</li>
-                </ul>
-
-                <h2>Emotional Support Techniques</h2>
-                
-                <h3>Active Listening</h3>
-                <p>
-                    Provide a safe space for your loved one to express their feelings, frustrations, and concerns. Listen without judgment and validate their experiences.
-                </p>
-
-                <h3>Encouragement and Motivation</h3>
-                <p>
-                    Celebrate small victories and progress, even when it seems minor. Encourage continued engagement in activities and treatments that improve quality of life.
-                </p>
-
-                <h3>Maintaining Independence</h3>
-                <p>
-                    Support independence by allowing your loved one to do what they can safely manage. Offer assistance when needed but avoid taking over tasks they can handle.
-                </p>
-
-                <h2>Communication Strategies</h2>
-                
-                <h3>Open Dialogue</h3>
-                <p>
-                    Maintain open communication about needs, preferences, and concerns. Regular check-ins help ensure you're providing the right level of support.
-                </p>
-
-                <h3>Respect and Dignity</h3>
-                <p>
-                    Always treat your loved one with respect and dignity. Avoid talking down to them or making decisions without their input when possible.
-                </p>
-
-                <h2>Self-Care for Caregivers</h2>
-                
-                <h3>Physical Health</h3>
-                <p>
-                    Caregiving can be physically demanding. Maintain your own health through regular <a href="gentle-exercise-routines-chronic-pain.html">exercise</a>, proper nutrition, and adequate rest.
-                </p>
-
-                <h3>Emotional Well-being</h3>
-                <p>
-                    Caregiver stress and burnout are common. Seek support from friends, family, or professional counselors. Consider joining caregiver support groups.
-                </p>
-
-                <h3>Respite Care</h3>
-                <p>
-                    Take breaks from caregiving responsibilities. Respite care services can provide temporary relief while ensuring your loved one receives proper care.
-                </p>
-
-                <h2>Building a Support Network</h2>
-                <p>
-                    Don't try to do everything alone. Build a network of support including:
-                </p>
-                <ul>
-                    <li>Family and friends who can help with specific tasks</li>
-                    <li>Healthcare professionals who can provide guidance</li>
-                    <li>Support groups for both patients and caregivers</li>
-                    <li>Community resources and services</li>
-                </ul>
-
-                <h2>Adapting to Changing Needs</h2>
-                <p>
-                    Arthritis symptoms and needs can change over time. Be flexible and willing to adjust your caregiving approach as your loved one's condition evolves.
-                </p>
-
-                
-                <div class="bg-gray-50 rounded-xl p-6 mt-8">
-                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Related RA Resources</h3>
-                    <div class="grid md:grid-cols-2 gap-4">
-
-                        <a href="being-well-vs-arthritis-care.html" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200" onclick="trackInternalNav('being-well-vs-arthritis-care.html')">
-                            <h4 class="font-medium text-gray-900 mb-1">Being well care</h4>
-                            <p class="text-sm text-gray-600">Discover more about being well care for arthritis management</p>
-                        </a>
-                        <a href="caregiver-support-arthritis.html" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200" onclick="trackInternalNav('caregiver-support-arthritis.html')">
-                            <h4 class="font-medium text-gray-900 mb-1">Caregiver support</h4>
-                            <p class="text-sm text-gray-600">Discover more about caregiver support for arthritis management</p>
-                        </a>
-                        <a href="elderly-arthritis-care.html" class="block p-4 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all duration-200" onclick="trackInternalNav('elderly-arthritis-care.html')">
-                            <h4 class="font-medium text-gray-900 mb-1">Elderly care</h4>
-                            <p class="text-sm text-gray-600">Discover more about elderly care for arthritis management</p>
-                        </a>
+            <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                        Caregivers Arthritis - RA Management Guide
+                    </h1>
+                    
+                    <div class="flex items-center text-gray-600 mb-6">
+                        <span class="mr-4">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            January 15, 2024
+                        </span>
+                        <span class="mr-4">
+                            <i class="fas fa-user mr-2"></i>
+                            Being Well Team
+                        </span>
+                        <span>
+                            <i class="fas fa-tag mr-2"></i>
+                            RA Wellness
+                        </span>
                     </div>
-                    <div class="mt-6 text-center">
-                        <a href="../index.html" class="inline-block bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-200" onclick="trackInternalNav('../index.html')">
-                            Download Being Well App
-                        </a>
-                        <a href="../blog.html" class="inline-block bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg border border-purple-200 hover:bg-purple-50 transition-colors ml-4" onclick="trackInternalNav('../blog.html')">
-                            Explore More RA Resources
-                        </a>
-                    </div>
-                </div><h2>Conclusion</h2>
-                <p>
-                    Caregiving for someone with arthritis is both challenging and rewarding. By providing practical support, emotional encouragement, and maintaining your own well-being, you can help your loved one live well with RA while preserving your own health and happiness.
-                </p>
-            </div>
-        </article>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Being Well App</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('../index.html')">Home</a></li>
-                        <li><a href="../index.html#features" class="text-gray-400 hover:text-white">Features</a></li>
-                        <li><a href="../index.html#how-it-works" class="text-gray-400 hover:text-white">How It Works</a></li>
-                    </ul>
+                    <!-- Article Content -->
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="text-xl text-gray-600 mb-8">
+                            Discover effective strategies for caregivers arthritis to manage rheumatoid arthritis symptoms and improve your quality of life.
+                        </p>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Understanding Caregivers Arthritis
+                        </h2>
+                        
+                        <p class="mb-6">
+                            Managing rheumatoid arthritis (RA) requires a comprehensive approach that addresses multiple aspects of your health and lifestyle. This guide will help you understand how caregivers arthritis can play a crucial role in your RA management plan.
+                        </p>
+
+                        <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">
+                            Key Benefits for RA Management
+                        </h3>
+                        
+                        <p class="mb-6">
+                            Incorporating caregivers arthritis into your daily routine can provide significant benefits for managing RA symptoms and improving overall wellness.
+                        </p>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                            <h4 class="font-bold text-blue-900 mb-2">Benefits of Caregivers Arthritis:</h4>
+                            <ul class="list-disc list-inside text-blue-800 space-y-1">
+                                <li>Reduces inflammation and pain</li>
+                                <li>Improves joint mobility and flexibility</li>
+                                <li>Enhances overall quality of life</li>
+                                <li>Supports mental health and well-being</li>
+                                <li>Complements medical treatment plans</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Practical Implementation
+                        </h2>
+
+                        <p class="mb-6">
+                            Successfully integrating caregivers arthritis into your RA management routine requires careful planning and consistent practice.
+                        </p>
+
+                        <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+                            <h4 class="font-bold text-green-900 mb-2">Implementation Tips:</h4>
+                            <ul class="list-disc list-inside text-green-800 space-y-1">
+                                <li>Start slowly and gradually increase intensity</li>
+                                <li>Listen to your body and respect your limits</li>
+                                <li>Maintain consistency in your routine</li>
+                                <li>Track your progress and symptoms</li>
+                                <li>Consult with healthcare providers</li>
+                            </ul>
+                        </div>
+
+                        <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                            Conclusion
+                        </h2>
+
+                        <p class="mb-6">
+                            Caregivers Arthritis can be a valuable component of your comprehensive RA management strategy. By understanding the benefits and implementing practical approaches, you can take proactive steps toward better health and improved quality of life.
+                        </p>
+
+                        <p class="mb-8">
+                            Remember that every individual's experience with RA is unique, so it's important to work with your healthcare team to develop a personalized approach that works best for you.
+                        </p>
+
+                        <div class="bg-blue-50 p-6 rounded-lg text-center">
+                            <h3 class="text-lg font-bold text-blue-900 mb-3">Ready to Start Your RA Wellness Journey?</h3>
+                            <p class="text-blue-800 mb-4">
+                                Get your personalized RA wellness plan from Being Well today.
+                            </p>
+                            <a href="../index.html" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                                Start Your Assessment
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Blog Categories</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../blog.html#exercise" class="text-gray-400 hover:text-white">Exercise & Movement</a></li>
-                        <li><a href="../blog.html#nutrition" class="text-gray-400 hover:text-white">Nutrition & Diet</a></li>
-                        <li><a href="../blog.html#mental-health" class="text-gray-400 hover:text-white">Mental Health</a></li>
-                        <li><a href="../blog.html#sleep" class="text-gray-400 hover:text-white">Sleep & Recovery</a></li>
-                    </ul>
+            </article>
+
+            <!-- Related Articles -->
+            <section class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="arthritis-pain-management.html" class="hover:text-purple-600">Arthritis Pain Management Strategies</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn effective techniques for managing arthritis pain and improving your quality of life.</p>
+                            <a href="arthritis-pain-management.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="wellness-pillars-overview.html" class="hover:text-purple-600">Wellness Pillars Overview</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Discover the key pillars of wellness for comprehensive arthritis management.</p>
+                            <a href="wellness-pillars-overview.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">
+                                <a href="symptom-tracking-for-doctor.html" class="hover:text-purple-600">Symptom Tracking for Doctor Visits</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn how to effectively track and communicate your symptoms to healthcare providers.</p>
+                            <a href="symptom-tracking-for-doctor.html" class="text-purple-600 hover:text-purple-800 text-sm font-medium">Read More →</a>
+                        </div>
+                    </article>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">RA Management</h3>
-                    <ul class="space-y-2">
-                        <li><a href="ra-management-beginners-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('ra-management-beginners-complete-guide.html')">Beginner's Guide</a></li>
-                        <li><a href="exercise-nutrition-ra-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('exercise-nutrition-ra-complete-guide.html')">Exercise & Nutrition</a></li>
-                        <li><a href="ra-mental-health-support-complete-guide.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('ra-mental-health-support-complete-guide.html')">Mental Health Support</a></li>
-                        <li><a href="workplace-accommodations-ra.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('workplace-accommodations-ra.html')">Workplace Accommodations</a></li>
-                    </ul>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Being Well</h3>
+                        <p class="text-gray-400 text-sm">
+                            Your comprehensive RA wellness platform for better health and quality of life.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="../index.html" class="hover:text-white">Home</a></li>
+                            <li><a href="../blog.html" class="hover:text-white">Blog</a></li>
+                            <li><a href="../about.html" class="hover:text-white">About</a></li>
+                            <li><a href="../contact.html" class="hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Resources</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="arthritis-pain-management.html" class="hover:text-white">Pain Management</a></li>
+                            <li><a href="exercise-arthritis.html" class="hover:text-white">Exercise Guide</a></li>
+                            <li><a href="nutrition-arthritis.html" class="hover:text-white">Nutrition Tips</a></li>
+                            <li><a href="sleep-arthritis.html" class="hover:text-white">Sleep Guide</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../blog.html" class="text-gray-400 hover:text-white">All Articles</a></li>
-                        <li><a href="how-reduce-morning-stiffness-rheumatoid-arthritis.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('how-reduce-morning-stiffness-rheumatoid-arthritis.html')">Morning Stiffness</a></li>
-                        <li><a href="chair-exercises-arthritis-patients.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('chair-exercises-arthritis-patients.html')">Chair Exercises</a></li>
-                        <li><a href="anti-inflammatory-meal-planning-autoimmune.html" class="text-gray-400 hover:text-white" onclick="trackInternalNav('anti-inflammatory-meal-planning-autoimmune.html')">Meal Planning</a></li>
-                    </ul>
+                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                    <p>&copy; 2024 Being Well. All rights reserved.</p>
                 </div>
             </div>
+        </footer>
+    </div>
 
-            <div class="border-t border-gray-800 mt-12 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="text-gray-400 text-sm">
-                        © 2024 Being Well. All rights reserved.
-                    </div>
-                    <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-                        <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- JavaScript for Analytics -->
+    <script>
+        function trackInternalNav(url) {
+            gtag('event', 'internal_navigation', {
+                'event_category': 'engagement',
+                'event_label': url,
+                'value': 1
+            });
+        }
+    </script>
 </body>
 </html>
-    
-    
