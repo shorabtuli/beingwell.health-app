@@ -116,5 +116,4 @@ yarn-error.log*
 .env.test.local
 .env.production.local beingwell.health PRD.txt
 node_modules/
-images/
 BeingWellApp/
