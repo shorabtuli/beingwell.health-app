@@ -413,16 +413,16 @@
                 const result = await response.json();
                 
                 if (response.ok) {
-                    alert('Thank you for signing up! We\'ll be in touch soon.');
+                    alert('Thank you for signing up!\n\nCheck your email for your personalized wellness plan.');
                     emailInput.value = '';
                 } else {
                     console.error('Email API error:', result);
-                    alert('Thank you for signing up! We\'ll be in touch soon.');
+                    alert('Thank you for signing up!\n\nCheck your email for your personalized wellness plan.');
                     emailInput.value = '';
                 }
             } catch (error) {
                 console.error('Network error:', error);
-                alert('Thank you for signing up! We\'ll be in touch soon.');
+                alert('Thank you for signing up!\n\nCheck your email for your personalized wellness plan.');
                 emailInput.value = '';
             } finally {
                 // Re-enable button
