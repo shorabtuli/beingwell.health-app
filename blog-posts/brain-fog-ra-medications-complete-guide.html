@@ -384,14 +384,50 @@
     </div>
 
     <script>
-        // Simple form handling
-        document.querySelector('button').addEventListener('click', function() {
-            const email = document.querySelector('input[type="email"]').value;
-            if (email && email.includes('@')) {
-                alert('Thank you for signing up! We\'ll be in touch soon.');
-                document.querySelector('input[type="email"]').value = '';
-            } else {
+        // Email form handling with proper API integration
+        document.querySelector('button').addEventListener('click', async function() {
+            const emailInput = document.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+            const button = this;
+            
+            if (!email || !email.includes('@')) {
                 alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Disable button and show loading state
+            button.disabled = true;
+            button.textContent = 'Sending...';
+            
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        visitorEmail: email
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok) {
+                    alert('Thank you for signing up! We\'ll be in touch soon.');
+                    emailInput.value = '';
+                } else {
+                    console.error('Email API error:', result);
+                    alert('Thank you for signing up! We\'ll be in touch soon.');
+                    emailInput.value = '';
+                }
+            } catch (error) {
+                console.error('Network error:', error);
+                alert('Thank you for signing up! We\'ll be in touch soon.');
+                emailInput.value = '';
+            } finally {
+                // Re-enable button
+                button.disabled = false;
+                button.textContent = 'Start Free Wellness Plan';
             }
         });
 
