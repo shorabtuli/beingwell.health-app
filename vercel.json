@@ -20,7 +20,7 @@
     }
   ],
   "routes": [
-    { "handle": "filesystem" },           // serve files from builds first
+    { "handle": "filesystem" },
     { "src": "/blog", "dest": "/blog.html" },
     { "src": "/api/(.*)", "dest": "/api/$1" }
   ],
