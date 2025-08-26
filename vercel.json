@@ -1,185 +1,54 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": "*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "blog-posts/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "sitemap.xml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/*.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/arthritis-wellness-app-comparison.html",
-      "destination": "/blog-posts/arthritis-wellness-app-comparison.html",
-      "permanent": true
-    },
-    {
-      "source": "/arthritis-aid.html",
-      "destination": "/blog-posts/arthritis-aid.html",
-      "permanent": true
-    },
-    {
-      "source": "/arthritis-app-subscription.html",
-      "destination": "/blog-posts/arthritis-app-subscription.html",
-      "permanent": true
-    },
-    {
-      "source": "/mental-health-arthritis.html",
-      "destination": "/blog-posts/mental-health-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/how-to-reduce-morning-joint-stiffness.html",
-      "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html",
-      "permanent": true
-    },
-    {
-      "source": "/healthy-habits-chronic-illness.html",
-      "destination": "/blog-posts/healthy-habits-chronic-illness.html",
-      "permanent": true
-    },
-    {
-      "source": "/active-lifestyle-arthritis.html",
-      "destination": "/blog-posts/active-lifestyle-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/([^/]+)-arthritis.html",
-      "destination": "/blog-posts/$1-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/research.html",
-      "destination": "/blog-posts/arthritis-research-latest-findings.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/treatments.html",
-      "destination": "/blog-posts/treatment-plan-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/success-stories.html",
-      "destination": "/blog-posts/arthritis-success-stories.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/beginners.html",
-      "destination": "/blog-posts/ra-management-beginners-complete-guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/advanced.html",
-      "destination": "/blog-posts/meditation-for-ra-pain-complete-guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/specialized.html",
-      "destination": "/blog-posts/ra-pregnancy-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/education.html",
-      "destination": "/blog-posts/online-arthritis-education.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/pain-management.html",
-      "destination": "/blog-posts/hand-arthritis-exercises-for-pain-relief.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/exercise.html",
-      "destination": "/blog-posts/gentle-exercise-routines-chronic-pain.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/nutrition.html",
-      "destination": "/blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/mental-health.html",
-      "destination": "/blog-posts/anxiety-relief-arthritis.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/comorbidity.html",
-      "destination": "/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/community.html",
-      "destination": "/blog-posts/community-support-chronic-illness-diet-beginners.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/pregnancy.html",
-      "destination": "/blog-posts/ra-pregnancy-management.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/journaling.html",
-      "destination": "/blog-posts/journaling-ra-mental-health-complete-guide.html",
-      "permanent": true
-    },
-    {
-      "source": "/blog-posts/category/wellness.html",
-      "destination": "/blog-posts/holistic-wellness-ra-tips-beginners.html",
-      "permanent": true
-    }
+    { "src": "public/**/*", "use": "@vercel/static" },
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "blog-posts/*.html", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" },
+    { "src": "api/*.js", "use": "@vercel/node" }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Strict-Transport-Security",
-          "value": "max-age=31536000; includeSubDomains; preload"
-        }
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" }
       ]
     }
   ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    }
+  "routes": [
+    { "handle": "filesystem" },           // serve files from builds first
+    { "src": "/blog", "dest": "/blog.html" },
+    { "src": "/api/(.*)", "dest": "/api/$1" }
+  ],
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/arthritis-wellness-app-comparison.html", "destination": "/blog-posts/arthritis-wellness-app-comparison.html", "permanent": true },
+    { "source": "/arthritis-aid.html", "destination": "/blog-posts/arthritis-aid.html", "permanent": true },
+    { "source": "/arthritis-app-subscription.html", "destination": "/blog-posts/arthritis-app-subscription.html", "permanent": true },
+    { "source": "/mental-health-arthritis.html", "destination": "/blog-posts/mental-health-arthritis.html", "permanent": true },
+    { "source": "/how-to-reduce-morning-joint-stiffness.html", "destination": "/blog-posts/how-to-reduce-morning-joint-stiffness.html", "permanent": true },
+    { "source": "/healthy-habits-chronic-illness.html", "destination": "/blog-posts/healthy-habits-chronic-illness.html", "permanent": true },
+    { "source": "/active-lifestyle-arthritis.html", "destination": "/blog-posts/active-lifestyle-arthritis.html", "permanent": true },
+    { "source": "/([^/]+)-arthritis.html", "destination": "/blog-posts/$1-arthritis.html", "permanent": true },
+    { "source": "/blog-posts/category/research.html", "destination": "/blog-posts/arthritis-research-latest-findings.html", "permanent": true },
+    { "source": "/blog-posts/category/treatments.html", "destination": "/blog-posts/treatment-plan-arthritis.html", "permanent": true },
+    { "source": "/blog-posts/category/success-stories.html", "destination": "/blog-posts/arthritis-success-stories.html", "permanent": true },
+    { "source": "/blog-posts/category/beginners.html", "destination": "/blog-posts/ra-management-beginners-complete-guide.html", "permanent": true },
+    { "source": "/blog-posts/category/advanced.html", "destination": "/blog-posts/meditation-for-ra-pain-complete-guide.html", "permanent": true },
+    { "source": "/blog-posts/category/specialized.html", "destination": "/blog-posts/ra-pregnancy-management.html", "permanent": true },
+    { "source": "/blog-posts/category/education.html", "destination": "/blog-posts/online-arthritis-education.html", "permanent": true },
+    { "source": "/blog-posts/category/pain-management.html", "destination": "/blog-posts/hand-arthritis-exercises-for-pain-relief.html", "permanent": true },
+    { "source": "/blog-posts/category/exercise.html", "destination": "/blog-posts/gentle-exercise-routines-chronic-pain.html", "permanent": true },
+    { "source": "/blog-posts/category/nutrition.html", "destination": "/blog-posts/anti-inflammatory-diet-rheumatoid-arthritis.html", "permanent": true },
+    { "source": "/blog-posts/category/mental-health.html", "destination": "/blog-posts/anxiety-relief-arthritis.html", "permanent": true },
+    { "source": "/blog-posts/category/comorbidity.html", "destination": "/blog-posts/comorbidity-management-ra-diabetes-heart-disease.html", "permanent": true },
+    { "source": "/blog-posts/category/community.html", "destination": "/blog-posts/community-support-chronic-illness-diet-beginners.html", "permanent": true },
+    { "source": "/blog-posts/category/pregnancy.html", "destination": "/blog-posts/ra-pregnancy-management.html", "permanent": true },
+    { "source": "/blog-posts/category/journaling.html", "destination": "/blog-posts/journaling-ra-mental-health-complete-guide.html", "permanent": true },
+    { "source": "/blog-posts/category/wellness.html", "destination": "/blog-posts/holistic-wellness-ra-tips-beginners.html", "permanent": true }
   ]
-} 
+}
