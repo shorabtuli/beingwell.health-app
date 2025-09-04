@@ -84,6 +84,13 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom styles for prose links -->
+    <style>
+        .prose a {
+            text-decoration: underline;
+        }
+    </style>
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EXZ3HZTY6"></script>
@@ -155,12 +162,120 @@
                             RA Wellness
                         </span>
                     </div>
+                    
+                    <!-- Reading time + Last updated row -->
+                    <div id="meta-inline" class="mt-2 text-sm text-gray-600 flex flex-wrap items-center gap-3">
+                        <span id="read-time">~ • min read</span>
+                        <span aria-hidden="true">•</span>
+                        <span id="last-updated">Last updated: <time datetime="2024-01-15">January 15, 2024</time></span>
+                    </div>
+
+                    <script>
+                    (function(){
+                        const article = document.querySelector('article') || document.body;
+                        const words = (article?.innerText || '').trim().split(/\s+/).length;
+                        const mins = Math.max(3, Math.round(words/200));
+                        const rt = document.getElementById('read-time');
+                        if (rt) rt.textContent = `~ ${mins} min read`;
+                    })();
+                    </script>
 
                     <!-- Article Content -->
                     <div class="prose prose-lg max-w-none text-gray-700">
+                        <!-- Top CTA blue box -->
+                        <div class="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                            <p class="text-blue-900 text-sm sm:text-base">
+                                💡 <strong>Struggling with stress and RA?</strong> The free <strong>BeingWell</strong> app helps you build daily habits proven to reduce stress, inflammation, and improve focus.
+                            </p>
+                            <a href="../index.html"
+                               class="inline-flex items-center justify-center rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white hover:bg-purple-500 transition"
+                               data-cta="waitlist" data-loc="top" aria-label="Join the BeingWell waitlist">
+                               Join the waitlist →
+                            </a>
+                        </div>
+                        
                         <p class="text-xl text-gray-600 mb-8">
                             Discover the 8 essential wellness pillars that form the foundation of effective rheumatoid arthritis management. This comprehensive guide provides proven strategies, practical implementation tips, and a downloadable plan to help you build sustainable lifestyle habits.
                         </p>
+
+                        <!-- 8 Pillars at a Glance -->
+                        <section class="mt-6">
+                            <h2 class="text-xl font-bold text-gray-900 mb-3">8 Pillars at a Glance</h2>
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                                <a href="#nutrition" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">🥗</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Nutrition</div>
+                                    <p class="text-sm text-gray-600">Anti-inflammatory basics</p>
+                                </a>
+                                <a href="#hydration" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">💧</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Hydration</div>
+                                    <p class="text-sm text-gray-600">100 oz/day target</p>
+                                </a>
+                                <a href="#sleep" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">😴</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Sleep</div>
+                                    <p class="text-sm text-gray-600">Restore & recover</p>
+                                </a>
+                                <a href="#community" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">💬</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Community</div>
+                                    <p class="text-sm text-gray-600">Daily check-ins</p>
+                                </a>
+                                <a href="#selfcare" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">💆</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Self-care</div>
+                                    <p class="text-sm text-gray-600">Mood & relief</p>
+                                </a>
+                                <a href="#movement" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">🧘</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Movement</div>
+                                    <p class="text-sm text-gray-600">Gentle strength</p>
+                                </a>
+                                <a href="#mindfulness" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">🧠</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Mindfulness</div>
+                                    <p class="text-sm text-gray-600">Meditation & journaling</p>
+                                </a>
+                                <a href="#medicine" class="group rounded-xl border bg-white p-4 hover:shadow-md transition">
+                                    <div class="text-2xl">💊</div>
+                                    <div class="mt-2 font-semibold text-gray-900">Medicine</div>
+                                    <p class="text-sm text-gray-600">Stay on plan</p>
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Phone mockup with CTA -->
+                        <section class="mt-6 grid md:grid-cols-2 gap-6 items-center">
+                            <div class="order-2 md:order-1">
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Turn pillars into simple, daily nudges</li>
+                                    <li>• Track hydration, sleep, and movement</li>
+                                    <li>• See streaks and celebrate progress</li>
+                                </ul>
+                                <a href="../index.html"
+                                   class="mt-4 inline-flex items-center justify-center rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white hover:bg-purple-500 transition"
+                                   data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">
+                                   Join the waitlist →
+                                </a>
+                            </div>
+                            <div class="order-1 md:order-2 mx-auto">
+                                <!-- Simple phone mockup -->
+                                <div class="relative h-80 w-40 rounded-[2rem] border bg-gradient-to-b from-blue-200 to-purple-200 shadow-md">
+                                    <div class="absolute inset-2 rounded-[1.5rem] bg-white/70 backdrop-blur p-3">
+                                        <div class="h-6 w-24 mx-auto mt-1 rounded-full bg-gray-200"></div>
+                                        <div class="mt-4 space-y-2">
+                                            <div class="h-4 w-28 bg-purple-200 rounded"></div>
+                                            <div class="h-3 w-24 bg-blue-200 rounded"></div>
+                                            <div class="h-3 w-16 bg-green-200 rounded"></div>
+                                        </div>
+                                        <div class="absolute bottom-3 left-0 right-0 px-3">
+                                            <button class="w-full rounded-lg bg-purple-600 py-2 text-white text-xs font-semibold">Join Waitlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
 
                         <div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-8">
                             <h3 class="text-lg font-bold text-yellow-900 mb-3">💡 Important Note</h3>
@@ -169,7 +284,7 @@
                             </p>
                         </div>
 
-                        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="nutrition" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
                             🥗 1. Nutrition - The Foundation
                         </h2>
                         
@@ -203,8 +318,11 @@
                                 There's a book called "Medical Medium" that discusses a raw diet approach. While the author's theories about doctors and disease origins may be controversial, many people (including myself) have found the raw diet suggestions helpful for RA. <strong>Important:</strong> Over time, you'll need to add protein and calcium to your diet.
                             </p>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="hydration" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
                             💧 2. Hydration - The Essential
                         </h2>
                         
@@ -220,8 +338,11 @@
                                 <li><strong>Sleep protection:</strong> Avoid drinking water after 7 PM to prevent sleep disruption</li>
                             </ul>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="sleep" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
                             😴 3. Sleep - The Recovery Pillar
                         </h2>
                         
@@ -240,8 +361,11 @@
                                 <li><strong>Reading:</strong> Read a physical book (not Kindle or phone) to calm down</li>
                             </ul>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="community" class="text-2xl font-bold text-gray-900 mt-12 mb-6">
                             💬 4. Community - The Support Network
                         </h2>
                         
@@ -260,7 +384,7 @@
                             </ul>
                         </div>
 
-                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="selfcare" class="text-2xl font-bold text-gray-900 mt-12 mb-6">
                             💆 5. Self-Care - The Mental Health Pillar
                         </h2>
                         
@@ -279,8 +403,11 @@
                                 <li>Do anything that gives your mind a break from RA</li>
                             </ul>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="movement" class="text-2xl font-bold text-gray-900 mt-12 mb-6">
                             🧘 6. Stretching & Exercise - The Movement Pillar
                         </h2>
                         
@@ -312,8 +439,11 @@
                                 Search YouTube for "stretching and exercise with resistance bands" for more examples.
                             </p>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="mindfulness" class="text-2xl font-bold text-gray-900 mt-12 mb-6">
                             🧠 7. Meditation & Journaling - The Mindfulness Pillar
                         </h2>
                         
@@ -329,8 +459,11 @@
                                 <li><strong>Timing:</strong> Practice in the morning or evening, whichever works best for you</li>
                             </ul>
                         </div>
+                        <p class="mt-2">
+                            <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
+                        </p>
 
-                        <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-6">
+                        <h2 id="medicine" class="text-2xl font-bold text-gray-900 mt-12 mb-6">
                             💊 8. Medicine - The Medical Pillar
                         </h2>
                         
@@ -346,6 +479,17 @@
                                 <li>Track any side effects</li>
                                 <li>Communicate with your healthcare team</li>
                             </ul>
+                        </div>
+
+                        <!-- Mid-article CTA card -->
+                        <div class="my-8 rounded-xl border bg-white p-5 shadow-sm">
+                            <h3 class="font-bold text-gray-900 mb-2">Make these strategies automatic</h3>
+                            <p class="text-gray-700">The BeingWell app turns your plan into daily nudges with gentle reminders and streak tracking.</p>
+                            <a href="../index.html"
+                               class="mt-3 inline-flex items-center justify-center rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white hover:bg-purple-500 transition"
+                               data-cta="waitlist" data-loc="mid" aria-label="Join the BeingWell waitlist">
+                               Get early access →
+                            </a>
                         </div>
 
                         <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">
@@ -497,6 +641,66 @@
                     </article>
                 </div>
             </section>
+
+            <!-- FAQ Section -->
+            <section id="faq" class="mt-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">FAQs</h2>
+                <div class="space-y-3">
+                    <details class="rounded-lg border bg-white p-4">
+                        <summary class="font-semibold cursor-pointer">What are the most important pillars to start with?</summary>
+                        <p class="mt-2 text-gray-700">Begin with Nutrition, Hydration, and Sleep. These create the biggest impact and make the others easier.</p>
+                    </details>
+                    <details class="rounded-lg border bg-white p-4">
+                        <summary class="font-semibold cursor-pointer">How fast will I feel improvement?</summary>
+                        <p class="mt-2 text-gray-700">Many people notice changes in 2–4 weeks of consistent small habits. Track stress, sleep, and symptoms weekly.</p>
+                    </details>
+                    <details class="rounded-lg border bg-white p-4">
+                        <summary class="font-semibold cursor-pointer">Is it okay to exercise during a flare?</summary>
+                        <p class="mt-2 text-gray-700">Gentle movement like short walks and light range-of-motion can help. Stop if pain increases and follow your clinician's guidance.</p>
+                    </details>
+                </div>
+            </section>
+
+            <script type="application/ld+json">
+            {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+            {"@type":"Question","name":"What are the most important pillars to start with?","acceptedAnswer":{"@type":"Answer","text":"Begin with Nutrition, Hydration, and Sleep. These create the biggest impact and make the others easier."}},
+            {"@type":"Question","name":"How fast will I feel improvement?","acceptedAnswer":{"@type":"Answer","text":"Many people notice changes in 2–4 weeks of consistent small habits. Track stress, sleep, and symptoms weekly."}},
+            {"@type":"Question","name":"Is it okay to exercise during a flare?","acceptedAnswer":{"@type":"Answer","text":"Gentle movement like short walks and light range-of-motion can help. Stop if pain increases and follow your clinician's guidance."}}
+            ]}
+            </script>
+
+            <!-- Sticky bottom overlay CTA -->
+            <div id="sticky-cta" class="fixed inset-x-4 bottom-4 z-40">
+                <div class="mx-auto max-w-3xl rounded-2xl bg-white/95 shadow-lg ring-1 ring-gray-200 p-3 sm:flex sm:items-center sm:justify-between">
+                    <p class="text-sm text-gray-800">Fight RA stress with daily habits.</p>
+                    <div class="mt-3 sm:mt-0 flex items-center gap-3">
+                        <a href="../index.html"
+                           class="inline-flex items-center justify-center rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white hover:bg-purple-500 transition"
+                           data-cta="waitlist" data-loc="sticky" aria-label="Join the BeingWell waitlist">
+                           Join the waitlist →
+                        </a>
+                        <button id="sticky-close" class="rounded-full p-2 text-gray-500 hover:bg-gray-100" aria-label="Close promotion">✕</button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+            (function(){
+                const key='bw_sticky_dismissed_until';
+                const closeBtn=document.getElementById('sticky-close');
+                const bar=document.getElementById('sticky-cta');
+                try{
+                    const until=+localStorage.getItem(key)||0;
+                    if(Date.now()<until){ if(bar) bar.remove(); }
+                }catch(e){}
+                if(closeBtn){
+                    closeBtn.addEventListener('click',()=>{
+                        try{ localStorage.setItem(key, String(Date.now()+7*24*60*60*1000)); }catch(e){}
+                        if(bar) bar.remove();
+                    });
+                }
+            })();
+            </script>
         </main>
 
         <!-- Footer -->
@@ -558,6 +762,18 @@
                 'value': 1
             });
         }
+    </script>
+
+    <!-- CTA analytics hooks -->
+    <script>
+    (function(){
+        const els = document.querySelectorAll('[data-cta="waitlist"]');
+        els.forEach(el=>{
+            el.addEventListener('click', ()=>{
+                if (window.gtag) gtag('event','waitlist_click',{location: el.getAttribute('data-loc')||'unknown'});
+            });
+        });
+    })();
     </script>
 </body>
 </html>
