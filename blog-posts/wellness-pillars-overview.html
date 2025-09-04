@@ -384,17 +384,31 @@
                         </h2>
                         
                         <p class="mb-6">
-                            <strong>Target:</strong> 100 ounces of water daily
+                          Hydration helps cushion and lubricate joints (synovial fluid is mostly water), supports nutrient delivery and waste removal, and can reduce perceived pain and fatigue. Even mild dehydration may concentrate inflammatory signals and make flares feel worse. A simple rule of thumb is to drink about <strong>0.5–0.67 ounces of water per pound of body weight per day</strong> (many adults land around <strong>~100 oz/day</strong>). Personalize your target for activity, climate, pregnancy, or medications with your clinician.
                         </p>
 
-                        <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
-                            <h4 class="font-bold text-blue-900 mb-3">💧 Hydration Strategy:</h4>
-                            <ul class="list-disc list-inside text-blue-800 space-y-2">
-                                <li><strong>Start your day:</strong> 3-4 large glasses of water first thing in the morning</li>
-                                <li><strong>Consistent schedule:</strong> Drink water throughout the day on a regular schedule</li>
-                                <li><strong>Sleep protection:</strong> Avoid drinking water after 7 PM to prevent sleep disruption</li>
-                            </ul>
+                        <div id="hydration-calculator" class="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4 mb-6">
+                          <label for="hc-weight" class="block text-sm font-medium text-blue-900">
+                            Weight: <span id="hc-weight-lb" class="font-semibold">160</span> lb (<span id="hc-weight-kg" class="font-semibold">73</span> kg)
+                          </label>
+                          <input id="hc-weight" type="range" min="80" max="260" step="1" value="160" class="mt-2 w-full accent-blue-600" />
+                          <div class="mt-2 text-blue-900 text-sm">
+                            Recommended daily water: <span id="hc-oz" class="font-semibold">80–107 oz</span>
+                            (<span id="hc-liters" class="font-semibold">2.4–3.2 L</span>)
+                          </div>
+                          <p class="text-xs text-blue-800 mt-1">
+                            Rule of thumb: ~0.5–0.67 oz per lb body weight. Adjust with your clinician.
+                          </p>
                         </div>
+
+                        <h3 class="font-bold text-gray-900 mb-2">💡 Strategies to stay hydrated throughout the day</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-6">
+                          <li>Start your day with 3–4 big glasses of water.</li>
+                          <li>Carry a 32 oz bottle and set a refill target (e.g., three refills).</li>
+                          <li>Set timers every 60–90 minutes or pair sips with routines (meetings, email checks).</li>
+                          <li>Add variety: unsweetened herbal tea, lemon, or low/no-sugar electrolytes.</li>
+                          <li>Avoid large amounts 2–3 hours before bed to protect sleep.</li>
+                        </ul>
                         <p class="mt-2">
                             <a href="../index.html" class="text-purple-700 font-semibold hover:underline" data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">Add this to my daily routine →</a>
                         </p>
@@ -899,6 +913,32 @@
                 if (window.gtag) gtag('event','waitlist_click',{location: el.getAttribute('data-loc')||'unknown'});
             });
         });
+    })();
+    </script>
+
+    <script>
+    (function(){
+      const el = document.getElementById('hydration-calculator');
+      if (!el) return;
+      const weight = document.getElementById('hc-weight');
+      const lb = document.getElementById('hc-weight-lb');
+      const kg = document.getElementById('hc-weight-kg');
+      const oz = document.getElementById('hc-oz');
+      const liters = document.getElementById('hc-liters');
+
+      function update(){
+        const w = parseInt(weight.value, 10) || 160;
+        const minOz = Math.round(w * 0.5);
+        const maxOz = Math.round(w * 0.67);
+        const minL = (minOz * 0.0295735).toFixed(1);
+        const maxL = (maxOz * 0.0295735).toFixed(1);
+        lb.textContent = w;
+        kg.textContent = Math.round(w * 0.453592);
+        oz.textContent = `${minOz}–${maxOz} oz`;
+        liters.textContent = `${minL}–${maxL} L`;
+      }
+      weight.addEventListener('input', update);
+      update();
     })();
     </script>
 </body>
