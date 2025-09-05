@@ -148,6 +148,22 @@
                         Wellness Pillars Overview - RA Management Guide
                     </h1>
                     
+                    <!-- Top CTA blue box -->
+                    <div class="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6 rounded-lg">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <div class="flex-1">
+                                <p class="text-blue-900 font-medium">
+                                    💡 <strong>Struggling with RA?</strong> The free <strong>BeingWell</strong> app helps you build daily habits proven to reduce inflammation and improve focus.
+                                </p>
+                            </div>
+                            <a href="#signup" 
+                               class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
+                               data-cta="waitlist" data-loc="top" aria-label="Join the BeingWell waitlist">
+                                Join the waitlist →
+                            </a>
+                        </div>
+                    </div>
+                    
                     <div class="flex items-center text-gray-600 mb-6">
                         <span class="mr-4">
                             <i class="fas fa-calendar-alt mr-2"></i>
@@ -197,6 +213,30 @@
                         <p class="text-xl text-gray-700 leading-relaxed max-w-3xl mb-8">
   Applying key lifestyle habits can help you better manage rheumatoid arthritis and fight off inflammation. This guide highlights the most impactful changes and shows you how to make them simple, repeatable routines. The first four—nutrition, hydration, sleep, and exercise—are the most critical. <strong>Nutrition:</strong> build an anti-inflammatory plate by favoring vegetables, lean proteins, and whole foods while identifying triggers to limit. <strong>Hydration:</strong> set a daily target (around 100 oz), start with a morning water routine, and sip steadily through the day. <strong>Sleep:</strong> keep a consistent schedule and calming wind-down so your body can fully recover overnight. <strong>Exercise:</strong> focus on gentle stretching and low-impact strength, starting small and progressing gradually to support joints and reduce flares. The full set of habits is covered below.
 </p>
+
+                        <!-- Phone Mockup with CTA -->
+                        <div class="flex flex-col lg:flex-row items-center gap-8 mb-8">
+                            <div class="flex-1">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Turn these pillars into daily habits</h3>
+                                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                                    <li>Turn pillars into simple, daily nudges</li>
+                                    <li>Track hydration, sleep, and movement</li>
+                                    <li>See streaks and celebrate progress</li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="relative mb-6">
+                                    <img src="https://www.beingwell.health/public/images/being-well-plan-ready.png"
+                                         alt="BeingWell app screen showing 'Your personalized wellness plan is ready!' with AI-powered recommendations for RA journey"
+                                         class="w-64 h-auto rounded-3xl shadow-2xl">
+                                </div>
+                                <!-- Join Waitlist CTA -->
+                                <a href="#signup" class="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg text-lg"
+                                   data-cta="waitlist" data-loc="inline" aria-label="Join the BeingWell waitlist">
+                                    Join the waitlist
+                                </a>
+                            </div>
+                        </div>
 
                         <!-- 8 Pillars at a Glance -->
                         <section class="mt-6">
@@ -390,9 +430,9 @@
                                 <li>Green smoothie (spinach, berries, flax, fortified almond milk)</li>
                                 <li>Veggie scramble (eggs or tofu) + avocado</li>
                                 <li>GF avocado toast + smoked salmon</li>
-                              </ul>
+                            </ul>
                               <p class="text-xs text-gray-500 mt-2">*Use certified gluten-free oats if needed.</p>
-                            </div>
+                        </div>
 
                             <!-- Lunch -->
                             <div class="rounded-xl border bg-white p-5">
@@ -425,6 +465,12 @@
                           <p class="text-sm text-gray-600 mt-4"><strong>Start gradually:</strong> nail an anti-inflammatory breakfast for a couple of weeks, then layer on lunch and dinner.</p>
                         </div>
 
+                        <!-- Inline CTA -->
+                        <div class="bg-purple-50 border-l-4 border-purple-400 p-4 mb-6 rounded-lg">
+                            <p class="text-purple-900 font-medium">
+                                <strong>Want to track sleep & hydration with reminders?</strong> <a href="#signup" class="text-purple-700 underline hover:no-underline" data-cta="waitlist" data-loc="inline">Sign up here</a>.
+                            </p>
+                        </div>
 
                         <h2 id="hydration" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
                             💧 2. Hydration - The Essential
@@ -605,7 +651,7 @@
                         <div class="my-8 rounded-xl border bg-white p-5 shadow-sm">
                             <h3 class="font-bold text-gray-900 mb-2">Make these strategies automatic</h3>
                             <p class="text-gray-700">The BeingWell app turns your plan into daily nudges with gentle reminders and streak tracking.</p>
-                            <a href="../index.html"
+                            <a href="#signup"
                                class="mt-3 inline-flex items-center justify-center rounded-lg bg-purple-600 px-4 py-2 font-semibold text-white hover:bg-purple-500 transition"
                                data-cta="waitlist" data-loc="mid" aria-label="Join the BeingWell waitlist">
                                Get early access →
@@ -1033,6 +1079,81 @@
       weight.addEventListener('input', update);
       update();
     })();
+    </script>
+
+    <!-- Sticky CTA Overlay -->
+    <div id="sticky-cta" class="fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
+        <div class="flex items-center justify-between gap-3">
+            <div class="flex-1">
+                <p class="text-sm font-medium text-gray-900">Fight RA with daily habits.</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="#signup" 
+                   class="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold rounded-lg transition-colors duration-200"
+                   data-cta="waitlist" data-loc="sticky" aria-label="Join the BeingWell waitlist">
+                    Join the waitlist →
+                </a>
+                <button onclick="dismissStickyCTA()" 
+                        class="text-gray-400 hover:text-gray-600 transition-colors duration-200"
+                        aria-label="Dismiss notification">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sticky CTA dismissal functionality
+        function dismissStickyCTA() {
+            const sticky = document.getElementById('sticky-cta');
+            if (sticky) {
+                sticky.style.display = 'none';
+                localStorage.setItem('sticky-cta-dismissed', 'true');
+            }
+        }
+
+        // Check if CTA was previously dismissed
+        if (localStorage.getItem('sticky-cta-dismissed') === 'true') {
+            const sticky = document.getElementById('sticky-cta');
+            if (sticky) {
+                sticky.style.display = 'none';
+            }
+        }
+
+        // Auto-hide sticky CTA when important note is visible
+        (function(){
+            const sticky = document.getElementById('sticky-cta');
+            const blocker = document.getElementById('important-note');
+            if (!sticky || !blocker) return;
+            
+            const io = new IntersectionObserver(([entry]) => {
+                const hide = entry.isIntersecting;
+                sticky.style.opacity = hide ? '0' : '1';
+                sticky.style.pointerEvents = hide ? 'none' : 'auto';
+                sticky.style.transition = 'opacity 160ms ease';
+            }, { threshold: 0.05 });
+            
+            io.observe(blocker);
+        })();
+
+        // CTA Analytics tracking
+        (function(){
+            document.addEventListener('click', function(e) {
+                const cta = e.target.closest('[data-cta="waitlist"]');
+                if (cta) {
+                    const location = cta.getAttribute('data-loc') || 'unknown';
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'cta_click', {
+                            'event_category': 'engagement',
+                            'event_label': 'waitlist_' + location,
+                            'value': 1
+                        });
+                    }
+                }
+            });
+        })();
     </script>
 </body>
 </html>
