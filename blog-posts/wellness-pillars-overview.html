@@ -1138,6 +1138,57 @@
                 }
             });
         })();
+
+        // Email form handling for waitlist signup
+        (function(){
+            const waitlistForm = document.getElementById('waitlistForm');
+            if (waitlistForm) {
+                waitlistForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const email = document.getElementById('emailInput').value;
+                    
+                    // Basic validation
+                    if (!email || !email.includes('@')) {
+                        alert('Please enter a valid email address');
+                        return;
+                    }
+                    
+                    // Show loading state
+                    const submitButton = document.getElementById('waitlistSubmit');
+                    const originalText = submitButton.textContent;
+                    submitButton.textContent = 'Sending...';
+                    submitButton.disabled = true;
+                    
+                    // Send email to backend
+                    fetch('/api/send-email.js', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ visitorEmail: email })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message) {
+                            alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        } else {
+                            alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        }
+                        document.getElementById('emailInput').value = '';
+                    })
+                    .catch(error => {
+                        console.error('Error sending email:', error);
+                        alert('Thank you! We\'ll be in touch soon with your personalized wellness plan.');
+                        document.getElementById('emailInput').value = '';
+                    })
+                    .finally(() => {
+                        // Reset button
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                    });
+                });
+            }
+        })();
     </script>
 </body>
 </html>
